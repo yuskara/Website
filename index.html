@@ -1,123 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <title>React App</title>
   </head>
   <body>
-    <header>
-      <img src="images/logo-amnick.png" alt="logo" class="logo" />
-      <nav>
-        <li>
-          <a href="#" class="active">
-            <span>Home</span>
-          </a>
-        </li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </nav>
-    </header>
-    <section class="banner-area">
-      <div class="img-area"></div>
-      <div class="banner-text">
-        <h1 class="heading-primary">
-          <span class="heading-primary-main">Amnick social enterprise</span>
-          <span class="heading-primary-sub">Smart Cities, Environment and Technologies</span>
-        </h1>
-        <a href="#" class="btn btn-white">Learn More</a>
-      </div>
-    </section>
-    <section class="services-area" id="services">
-      <h3 class="header-text">Our services</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-      <div class="content-area">
-        <div class="single-service">
-          <div class="icon-area">
-            <svg class="service_icon">
-              <use xlink:href="images/symbol-defs.svg#icon-star"></use>
-            </svg>
-          </div>
-          <h2>Lorem ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-        </div>
-        <div class="single-service">
-          <div class="icon-area">
-            <svg class="service_icon">
-              <use xlink:href="images/symbol-defs.svg#icon-star"></use>
-            </svg>
-          </div>
-          <h2>Lorem ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-        </div>
-        <div class="single-service">
-          <div class="icon-area">
-            <svg class="service_icon">
-              <use xlink:href="images/symbol-defs.svg#icon-star"></use>
-            </svg>
-          </div>
-          <h2>Lorem ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-        </div>
-      </div>
-    </section>
-    <section class="work-area" id="work">
-      <h3 class="header-text">Our works</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-      <ul class="content-area">
-        <li><img src="images/image2.jpg" alt="" /></li>
-        <li><img src="images/image2.jpg" alt="" /></li>
-        <li><img src="images/image2.jpg" alt="" /></li>
-        <li><img src="images/image2.jpg" alt="" /></li>
-        <li><img src="images/image2.jpg" alt="" /></li>
-      </ul>
-    </section>
-    <section class="newsletter">
-      <h3 class="header-text">Subscribe us</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-      <form action="">
-        <input type="email" placeholder="Email" />
-        <a href="" class="btn">subscribe</a>
-      </form>
-    </section>
-    <section class="contact" id="contact">
-      <h3 class="header-text">Contact us</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-      <div class="content-area">
-        <div class="single-contact">
-          <svg class="contact_icon">
-            <use xlink:href="images/symbol-defs.svg#icon-location-pin"></use>
-          </svg>
-          <p>
-            Moving to new offices.<br />
-            Details to come here soon.
-          </p>
-          <svg class="contact_icon">
-            <use xlink:href="images/symbol-defs.svg#icon-email"></use>
-          </svg>
-          <p>info@amnick.com</p>
-          <svg class="contact_icon">
-            <use xlink:href="images/symbol-defs.svg#icon-phone"></use>
-          </svg>
-          <p>+44 7886 837 410</p>
-        </div>
-        <div class="single-contact">
-          <input type="text" placeholder="Enter your name..." />
-          <input type="email" placeholder="Enter your email.." />
-          <input type="submit" value="submit" />
-        </div>
-      </div>
-      <a class="back" href="#top">👆</a> 
-    </section>
-    <footer>
-      <div class="legal">
-        &copy; 2020 by Amnick. All rights reserved.
-      
-      </div>
-    </footer>
-    
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
   </body>
 </html>

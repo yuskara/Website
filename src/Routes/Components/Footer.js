@@ -10,9 +10,9 @@ import mail from '../imgs/mail.jpg';
 function Footer() {
     return (
         <div class="div-footer">
-            <div class="inner_footer">
-                <div class="logo_container">
-                    <a href="#" ><img src={footer_img} alt="logo" ></img></a>
+            <div  class="inner_footer">
+                <div id="box1" class="footer-boxes">
+                    <a href="#" ><img id="footer-logo" src={footer_img} alt="logo" ></img></a>
                     
                     <div class="socials">
                         <br></br>
@@ -23,8 +23,8 @@ function Footer() {
                     </div>
                 </div>
 
-                <div class="footer_third">
-                    <h1 class="logo-text"><span>YuKa </span> Center</h1>
+                <div id="box2" class="footer-boxes">
+                    <h1><span>YuKa </span> Center</h1>
                     <p>we help lienholders and law firms
                             work better together.      </p>
                 
@@ -34,7 +34,7 @@ function Footer() {
                     </div>
                     
                 </div>
-                <div class="footer_third">
+                <div id="box3" class="footer-boxes">
                     <h2>Quick Links</h2>
                     
                     <ul>

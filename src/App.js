@@ -15,7 +15,7 @@ function App() {
     <Router>
       <div className="App">
         <Menu />
-        {/* <Header /> */}
+        <Header />
         <Central />
         <Footer />
       </div>

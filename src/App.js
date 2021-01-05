@@ -14,10 +14,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* <Menu /> */}
-        {/* <Header /> */}
+        <Menu />
+        <Header />
         <Central />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </Router>
   );

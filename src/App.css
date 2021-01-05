@@ -386,6 +386,7 @@ background-size: 100% 2px;
 	.nav-gen-menu{
     display: none;
   }
+
   .div-small-menu {
     display: flex;
   }
@@ -428,9 +429,11 @@ background-size: 100% 2px;
   .nav-gen-menu{
     display: flex;
   }
+
   .div-footer .inner_footer .footer-boxes,
   .div-footer .footer-bottom {
     padding: 20px;
   }
+
 }
 

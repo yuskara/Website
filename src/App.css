@@ -86,7 +86,7 @@ background-size: 100% 2px;
   
   #footer-logo{
     margin-left: 20%;
-    width: 70px;
+    width: 80px;
   }
   
   #box2 h1{
@@ -170,9 +170,17 @@ background-size: 100% 2px;
   .div-footer .inner_footer {
     padding: 0;
   }
+  #box2 h1{
+    margin: 0em;
+    font-size: 50px;
+  }
+ 
   .div-footer .inner_footer .footer-boxes {
     width:100%;
    float: none;
+  }
+  .div-footer .footer-bottom{
+    padding: 0px 0;
   }
   .div-footer .footer-bottom h5{
     text-align: left;
@@ -193,8 +201,18 @@ background-size: 100% 2px;
   .div-footer .footer-bottom {
     font-size: 90%;
   }
-  #box2 img{
+  #box1 .socials{
+    margin: 0;
+  }
+  #box1 .socials a{
+    width: 38px;
+    margin: 2%;
+  }
+  .div-footer #box2 img{
     margin-left: 0%;
+  }
+  .div-footer .footer-bottom{
+    padding: 0px 0;
   }
   .div-footer .footer-bottom h5{
     font-size: 1rem; 

@@ -9,7 +9,6 @@ import phone from '../imgs/phone.jpg';
 import mail from '../imgs/mail.jpg';
 import '../css/Footer.css';
 
-
 function Footer() {
     return (
         <div class="div-footer">
@@ -54,7 +53,7 @@ function Footer() {
             </div>
         </div>
     );
-
+  
 }
 
 export default Footer;

@@ -2,7 +2,6 @@ import React,{ useState } from 'react';
 import styled from "styled-components";
 
 const Nav = styled.nav`
-  padding: 0 20px;
   min-height: 9vh;
   background: white;
   display: flex;
@@ -11,7 +10,15 @@ const Nav = styled.nav`
   position: fixed;
   top: 0;
   width: 100%;
+  @media (max-width: 768px) {
+    justify-content: space-around;
+  }
 
+`;
+
+const Logo = styled.h1`
+  font-size: 25px;
+  color: black;
 `;
 
 
@@ -54,7 +61,7 @@ transition: background-size 0.3s;
 `;
 
 const NavIcon = styled.button`
-  background: black;
+  background: red;
   cursor: pointer;
   border: none;
   outline: none;
@@ -74,14 +81,17 @@ const Line = styled.span`
   transition: width 0.4s ease-in-out;
 
   :nth-child(2) {
-    width: ${(props) => (props.open ? "40%" : "70%")};
+    width: ${({toggle}) => toggle ? "70%" : "40%"};
   }
 `;
 
 const Overlay = styled.div`
-  position: absolute;
-  height: ${(props) => (props.open ? "91vh" : 0)};
-  width: 100vw;
+  position:absolute;
+  height:${({toggle}) => toggle ? 0 : "100vh"};
+  position: fixed;
+  width: 36vw;
+  right: 0;
+  top: 9vh;
   background: #fff; 
   transition: height 0.4s ease-in-out;
 
@@ -98,7 +108,7 @@ const OverlayMenu = styled.ul`
   transform: translate(-50%, -50%);
 
   li {
-    opacity: ${(props) => (props.open ? 1 : 0)};
+    opacity: ${({toggle}) => toggle ? 0 : 1};
     font-size: 25px;
     margin: 50px 0px;
     transition: opacity 0.4s ease-in-out;
@@ -119,6 +129,7 @@ function Menu() {
   return (
     <>
       <Nav>
+      <Logo>Amnick</Logo>
         <Navbar>
           <Item>
             <Link target="#" href="">
@@ -142,14 +153,14 @@ function Menu() {
           </Item>
         </Navbar>
         <NavIcon onClick={() => setToggle(!toggle)}>
-          <Line open={toggle} />
-          <Line open={toggle} />
-          <Line open={toggle} />
+          <Line toggle={!toggle} />
+          <Line toggle={!toggle} />
+          <Line toggle={!toggle} />
         </NavIcon>
       </Nav>
-      <Overlay open={toggle}>
-        <OverlayMenu open={toggle}>
-          <Item>
+      <Overlay toggle={!toggle}>
+        <OverlayMenu toggle={!toggle}>
+        <Item>
             <Link target="#" href="">
             Home
             </Link>

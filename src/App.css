@@ -1,4 +1,19 @@
- 
+
+li {
+  color: white;
+}
+
+ul {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.App {
+  text-align: center;
+  background-color: rgb(224, 225, 226);
+}
 
 .a-small-menu {
   margin-right: 15px;
@@ -10,7 +25,7 @@
   width: 100%;
 }
 
-.div-menu-line {
+.div-menu-line { 
   background: white;
   width: 45px;
   height: 7px;
@@ -72,7 +87,7 @@ background-size: 100% 2px;
   .div-small-menu {
     display: flex;
   }
-   
+
 }
 
 /* RESPONSIVENESS*/
@@ -84,7 +99,7 @@ background-size: 100% 2px;
   .div-small-menu {
     display: flex;
   }
-   
+
 }
 
 /* RESPONSIVENESS*/

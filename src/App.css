@@ -58,8 +58,9 @@ ul {
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  position: fixed;
+  min-height: 9vh;
   top: 0%;
+  padding: 0 20px;
   width: 100%;
 }
 

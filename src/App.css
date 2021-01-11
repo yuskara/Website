@@ -55,26 +55,21 @@ ul {
 /*Menu*/
 .nav-gen-menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color: white;
+  background: white;
   min-height: 9vh;
   top: 0%;
   padding: 0 20px;
   width: 100%;
-}
-
-.menu-btn {
-  display: none;
+  position: fixed;
 }
 
 .nav-links {
-  width: 60%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   list-style: none;
-  overflow: hidden;
+  width: 60%;
 }
 .nav-links li {
   padding: 0 3% 0 3%;
@@ -99,77 +94,83 @@ ul {
   color: rgb(60, 48, 88);
 }
 
-@media (max-width: 700px) {
-  .nav-gen-menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: white;
-    position: fixed;
-    top: 0%;
-  }
-  .nav-links {
+.nav-button {
+  background: black;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  z-index: 1000;
+}
+
+span {
+  display: block;
+  border-radius: 50px;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #fff;
+  transition: width 0.4s ease-in-out;
+}
+
+.nav-button-span {
+  width: 40%;
+}
+
+.nav-sidebar {
+  height: 0;
+}
+
+.nav-sidebar-active {
+  position: absolute;
+  height: 91vh;
+  width: 100vw;
+  background: #1c2022;
+  transition: height 0.4s ease-in-out;
+}
+
+.nav-sidebar-links {
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+.nav-sidebar-links li {
+  opacity: 1;
+  font-size: 25px;
+  margin: 50px 0px;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.nav-sidebar-links-active li {
+  opacity: 0;
+  font-size: 25px;
+  margin: 50px 0px;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.nav-sidebar-links li:nth-child(2) {
+  margin: 50px 0px;
+}
+
+@media (min-width: 769px) {
+  .nav-button {
     display: none;
   }
 
-  .nav-gen-menu .menu-icon {
-    cursor: pointer;
-    display: inline-block;
-    align-self: flex-end;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
+  .nav-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-gen-menu {
+    justify-content: space-between;
+    margin-right: 10vw;
   }
 
-  .nav-gen-menu .menu-icon .navicon {
-    background: #333;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background 0.2s ease-out;
-    width: 18px;
-  }
-
-  .nav-gen-menu .menu-icon .navicon:before,
-  .nav-gen-menu .menu-icon .navicon:after {
-    background: #333;
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all 0.2s ease-out;
-    width: 100%;
-  }
-
-  .nav-gen-menu .menu-icon .navicon:before {
-    top: 5px;
-  }
-
-  .nav-gen-menu .menu-icon .navicon:after {
-    top: -5px;
-  }
-
-  .nav-gen-menu .menu-btn:checked ~ .nav-links {
-    display: block;
-    justify-content: flex-start;
-  }
-
-  .nav-gen-menu .menu-btn:checked ~ .menu-icon .navicon {
-    background: transparent;
-  }
-
-  .nav-gen-menu .menu-btn:checked ~ .menu-icon .navicon:before {
-    transform: rotate(-45deg);
-  }
-
-  .nav-gen-menu .menu-btn:checked ~ .menu-icon .navicon:after {
-    transform: rotate(45deg);
-  }
-
-  .nav-gen-menu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-  .nav-gen-menu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-    top: 0;
+  .nav-links {
+    display: none;
   }
 }
 

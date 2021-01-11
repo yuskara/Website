@@ -53,34 +53,18 @@ ul {
 }
 
 /*Menu*/
-
 .nav-gen-menu {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  overflow: hidden;
   display: flex;
-  justify-content: center;
-  min-height: 10vh;
-  background-color: #fff;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  position: fixed;
+  top: 0%;
+  width: 100%;
 }
 
-.menu-icon {
-  cursor: pointer;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
-}
-
-menu-icon .nav-icon {
-  background: #333;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: background 0.2s ease-out;
-  width: 18px;
+.menu-btn {
+  display: none;
 }
 
 .nav-links {
@@ -89,6 +73,7 @@ menu-icon .nav-icon {
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
+  overflow: hidden;
 }
 .nav-links li {
   padding: 0 3% 0 3%;
@@ -111,6 +96,80 @@ menu-icon .nav-icon {
   cursor: pointer;
   background-size: 100% 2px;
   color: rgb(60, 48, 88);
+}
+
+@media (max-width: 700px) {
+  .nav-gen-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    top: 0%;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .nav-gen-menu .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    align-self: flex-end;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+
+  .nav-gen-menu .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background 0.2s ease-out;
+    width: 18px;
+  }
+
+  .nav-gen-menu .menu-icon .navicon:before,
+  .nav-gen-menu .menu-icon .navicon:after {
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+
+  .nav-gen-menu .menu-icon .navicon:before {
+    top: 5px;
+  }
+
+  .nav-gen-menu .menu-icon .navicon:after {
+    top: -5px;
+  }
+
+  .nav-gen-menu .menu-btn:checked ~ .nav-links {
+    display: block;
+    justify-content: flex-start;
+  }
+
+  .nav-gen-menu .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .nav-gen-menu .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+
+  .nav-gen-menu .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+
+  .nav-gen-menu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .nav-gen-menu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
 }
 
 /* Boxes */

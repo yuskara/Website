@@ -1,5 +1,6 @@
 import React,{ useState } from 'react';
 import styled from "styled-components";
+import logo_img from '../imgs/footer_logo.png';
 
 const Nav = styled.nav`
   min-height: 9vh;
@@ -16,9 +17,10 @@ const Nav = styled.nav`
 
 `;
 
-const Logo = styled.h1`
-  font-size: 25px;
-  color: black;
+const Logo = styled.img`
+height: 45px;
+width: 45px;
+margin-left: 50px;
 `;
 
 
@@ -54,14 +56,12 @@ background-size: 0% 2px;
 transition: background-size 0.3s;
   :hover {
     cursor: pointer;
-    background-size: 100% 2px;
-    color: rgb(60, 48, 88);
-  
-  }
+    background-size: 100% 3px;
+}
 `;
 
 const NavIcon = styled.button`
-  background: red;
+  background: rgb(211, 199, 199);
   cursor: pointer;
   border: none;
   outline: none;
@@ -80,14 +80,14 @@ const Line = styled.span`
   background: white;
   transition: width 0.4s ease-in-out;
 
-  :nth-child(2) {
-    width: ${({toggle}) => toggle ? "70%" : "40%"};
+  :nth-child(2) {npm 
+    width: ${({toggle}) => toggle ? "40%" : "70%"};
   }
 `;
 
 const Overlay = styled.div`
   position:absolute;
-  height:${({toggle}) => toggle ? 0 : "100vh"};
+  height:${({toggle}) => toggle ? "100vh" : 0};
   position: fixed;
   width: 36vw;
   right: 0;
@@ -105,10 +105,11 @@ const OverlayMenu = styled.ul`
   position: absolute;
   left: 50%;
   top: 45%;
+  display:${({toggle}) => toggle ? "" : "none"};
   transform: translate(-50%, -50%);
 
   li {
-    opacity: ${({toggle}) => toggle ? 0 : 1};
+    opacity: ${({toggle}) => toggle ? 1 : 0};
     font-size: 25px;
     margin: 50px 0px;
     transition: opacity 0.4s ease-in-out;
@@ -129,7 +130,7 @@ function Menu() {
   return (
     <>
       <Nav>
-      <Logo>Amnick</Logo>
+      <Logo src={logo_img} alt="logo" class="logo"/>
         <Navbar>
           <Item>
             <Link target="#" href="">

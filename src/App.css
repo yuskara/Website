@@ -241,6 +241,13 @@ p,
   transition: all 0.3s;
 }
 
+/* RESPONSIVENESS*/
+/* Mobile phones */
+@media screen and (max-width: 450px) {
+	.nav-gen-menu{
+    display: none;
+  }
+
 #box1 .socials a:hover,
 #footer-logo:hover {
   border: 1px solid white;
@@ -343,13 +350,28 @@ p,
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
   }
+
+	.nav-gen-menu{
+    display: none;
+  }
+
+  .div-small-menu {
+    display: flex;
+  }
+
 }
 
 /* RESPONSIVENESS*/
 /* LARGER SCREENS */
 @media screen and (min-width: 901px) {
+
   .div-footer .inner_footer .footer-boxes,
   .div-footer .footer-bottom {
     padding: 20px;
   }
+
+  .nav-gen-menu{
+    display: flex;
+  }
+
 }

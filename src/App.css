@@ -16,6 +16,7 @@ hr {
   background-color: #68a0d2;
   border: 1px #68a0d2 solid;
 }
+
 hr:hover {
   transform: scale(1.5);
 }
@@ -263,6 +264,24 @@ p,
 }
 
 
-
+.welcome-content h1,
+.port h1 {
+  font-size: 1.2rem;
+}
+.grid-boxes {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.boxes {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.btn {
+  display: block;
+}
+.columns-container {
+  grid-template-columns: repeat(2, 1fr);
+}
+}
 
 

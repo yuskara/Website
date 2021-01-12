@@ -4,7 +4,7 @@ import header_img from '../imgs/header.png';
 function Header() {
   return (
       <div>
-          <img src={header_img} width="100%" height="auto" object-fit= "contain"></img>
+        <p>HEADER</p>
       </div>
   );
 }

@@ -16,6 +16,7 @@ hr {
   background-color: #68a0d2;
   border: 1px #68a0d2 solid;
 }
+
 hr:hover {
   transform: scale(1.5);
 }
@@ -315,6 +316,7 @@ p,
 }
 .columns-container {
   grid-template-columns: repeat(2, 1fr);
+}
 }
 
 /* RESPONSIVENESS*/

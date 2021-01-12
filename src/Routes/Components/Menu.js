@@ -1,6 +1,8 @@
 import React,{ useState } from 'react';
+import {Link } from "react-router-dom";
 import styled from "styled-components";
 import logo_img from '../imgs/footer_logo.png';
+
 
 const Nav = styled.nav`
   min-height: 9vh;
@@ -11,8 +13,9 @@ const Nav = styled.nav`
   position: fixed;
   top: 0;
   width: 100%;
+  z-index:10;
   @media (max-width: 768px) {
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
 `;
@@ -27,7 +30,7 @@ margin-left: 50px;
 const Navbar = styled.ul`
   list-style: none;
   display: flex;
-  width:60%;
+  width:inherit;
   justify-content:center;
 
   li:nth-child(2) {
@@ -43,7 +46,7 @@ const Item = styled.li`
 padding: 0 3% 0 3%;
 `;
 
-const Link = styled.a`
+const StyledLink = styled(Link)`
 color: #171819;
 font-family: "Open Sans", sans-serif;
 font-size: 16px;
@@ -65,6 +68,7 @@ const NavIcon = styled.button`
   cursor: pointer;
   border: none;
   outline: none;
+  margin-right: 1%;
 
   @media (min-width: 769px) {
     display: none;
@@ -80,20 +84,21 @@ const Line = styled.span`
   background: white;
   transition: width 0.4s ease-in-out;
 
-  :nth-child(2) {npm 
-    width: ${({toggle}) => toggle ? "40%" : "70%"};
+  :nth-child(2) {
+    width: ${({toggle}) => toggle ? "70%" : "40%"};
   }
 `;
 
 const Overlay = styled.div`
-  position:absolute;
-  height:${({toggle}) => toggle ? "100vh" : 0};
+  height:${({toggle}) => toggle ? "0" : "100vh"};
   position: fixed;
+  display:flex;
   width: 36vw;
   right: 0;
   top: 9vh;
   background: #fff; 
-  transition: height 0.4s ease-in-out;
+  box-shadow:${({toggle}) => toggle ?"0" :"8px 0px 5px 9px grey"};
+  transition: height 0.4s linear;
 
   @media (min-width: 769px) {
     display: none;
@@ -103,13 +108,14 @@ const Overlay = styled.div`
 const OverlayMenu = styled.ul`
   list-style: none;
   position: absolute;
+  width:inherit;
   left: 50%;
   top: 45%;
-  display:${({toggle}) => toggle ? "" : "none"};
+  display:${({toggle}) => toggle ? "none" : ""};
   transform: translate(-50%, -50%);
 
   li {
-    opacity: ${({toggle}) => toggle ? 1 : 0};
+    opacity: ${({toggle}) => toggle ? 0: 1};
     font-size: 25px;
     margin: 50px 0px;
     transition: opacity 0.4s ease-in-out;
@@ -130,27 +136,19 @@ function Menu() {
   return (
     <>
       <Nav>
-      <Logo src={logo_img} alt="logo" class="logo"/>
+      <Logo src={logo_img} alt="logo"/>
         <Navbar>
           <Item>
-            <Link target="#" href="">
-            Home
-            </Link>
+            <StyledLink to="">Home</StyledLink>
           </Item>
           <Item>
-            <Link target="#" href="">
-              About us
-            </Link>
+            <StyledLink to="">About us</StyledLink>
           </Item>
           <Item>
-            <Link target="#" href="">
-              Services
-            </Link>
+            <StyledLink to="">Services</StyledLink>
           </Item>
           <Item>
-            <Link target="#" href="">
-              Our Work
-            </Link>
+            <StyledLink to="">Our Work</StyledLink>
           </Item>
         </Navbar>
         <NavIcon onClick={() => setToggle(!toggle)}>
@@ -162,24 +160,16 @@ function Menu() {
       <Overlay toggle={!toggle}>
         <OverlayMenu toggle={!toggle}>
         <Item>
-            <Link target="#" href="">
-            Home
-            </Link>
+            <StyledLink to="">Home</StyledLink>
           </Item>
           <Item>
-            <Link target="#" href="">
-              About us
-            </Link>
+            <StyledLink to="">About us</StyledLink>
           </Item>
           <Item>
-            <Link target="#" href="">
-              Services
-            </Link>
+            <StyledLink to="">Services</StyledLink>
           </Item>
           <Item>
-            <Link target="#" href="">
-              Our Work
-            </Link>
+            <StyledLink to="">Our Work</StyledLink>
           </Item>
         </OverlayMenu>
       </Overlay>

@@ -10,9 +10,20 @@ body {
   background-color: #fff;
   line-height: 1.5rem;
 }
-p {
+
+/* p {
+  color: #616971!important;
+} */
+
+.central-div-welcome-content p,
+.central-div-grid-box p,
+.central-div-port-text,
+.central-div-box p,
+.central-div-web-tools-text,
+.central-div-flex-columns p {
   color: #616971!important;
 }
+
 .central-div-img {
   max-width: 100%;
 }

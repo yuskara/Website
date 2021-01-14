@@ -95,8 +95,9 @@ body {
 .central-hr-horizonal {
   padding: .2px 0;
   width: 80%;
-  border: 1px!important;
+  border: 1px;
   background-color: #616971!important;
+  border-style: solid;
 }
 
 /* portfolio */

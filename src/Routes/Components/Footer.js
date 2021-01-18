@@ -1,5 +1,4 @@
 import React from 'react';
-
 import footer_img from '../imgs/footer_logo.png';
 import facebook from '../imgs/facebook.png';
 import instagram from '../imgs/instagram.jpg';
@@ -13,7 +12,7 @@ function Footer() {
     return (
         <div class="div-footer">
             <div  class="inner_footer">
-                <div id="box1" class="footer-boxes">
+                <div id="footer-box1" class="footer-boxes">
                     <a href="#" ><img id="footer-logo" src={footer_img} alt="logo" ></img></a>
                     
                     <div class="socials">
@@ -25,20 +24,18 @@ function Footer() {
                     </div>
                 </div>
 
-                <div id="box2" class="footer-boxes">
+                <div id="footer-box2" class="footer-boxes">
                     <h1><span>YuKa </span> Center</h1>
                     <p>we help lienholders and law firms
-                            work better together.      </p>
-                
+                            work better together.      
+                    </p>
                     <div class="contact">
-                        <span><img src={phone}alt='phone'></img>&nbsp;+30 6988083143</span><br></br>
+                        <span><img src={phone}alt='phone'></img>&nbsp;+306988083143</span><br></br>
                         <span><img src={mail}alt='mail'></img>&nbsp;info@yuka.com</span>
                     </div>
-                    
                 </div>
-                <div id="box3" class="footer-boxes">
+                <div id="footer-box3" class="footer-boxes">
                     <h2>Quick Links</h2>
-                    
                     <ul>
                         <a href="#"><li>About</li></a>
                         <a href="#"><li>Services</li></a>
@@ -47,13 +44,11 @@ function Footer() {
                     </ul>
                 </div>    
             </div>
-            
             <div class="footer-bottom">
                 <h5> &copy;2020 yuka.com | Designed by YuKa </h5>
             </div>
         </div>
     );
-  
 }
 
 export default Footer;

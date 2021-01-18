@@ -5,8 +5,7 @@
 /*-- Body Reset --*/
 body {
   overflow-x: hidden;
-  font-family: "Montserrat", sans-serif;
-  /* color: #616971; */
+  font-family: 'Montserrat', sans-serif;
   background-color: #fff;
   line-height: 1.5rem;
 }
@@ -27,14 +26,7 @@ img {
   max-width: 100%;
 }
 
-/*
-img:hover {
-  border-radius: 10px;
-  transform: scale(1.1);
-  cursor: pointer;
-}
-*/
-
+ 
 li {
   color: white;
 }

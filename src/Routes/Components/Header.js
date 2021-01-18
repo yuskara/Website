@@ -14,6 +14,7 @@ function Header() {
           <div>
             <p>
               Whatever your life’s goals, <br /> our financial professionals
+            <br />
               can help design a strategy tailored to your specific needs.
               <br />
             </p>

@@ -1,18 +1,13 @@
 
-:root {
-  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-}
-
-/*-- Body Reset --*/
-body {
-  overflow-x: hidden;
-  font-family: 'Arvo', serif;
-  background-color: #fff;
-  line-height: 1.5rem;
-}
-p {
+.central-div-welcome-content p,
+.central-div-grid-box p,
+.central-div-port-text,
+.central-div-box p,
+.central-div-web-tools-text,
+.central-div-flex-columns p {
   color: #616971!important;
 }
+
 .central-div-img {
   max-width: 100%;
 }
@@ -84,8 +79,9 @@ p {
 .central-hr-horizonal {
   padding: .2px 0;
   width: 80%;
-  border: 1px!important;
+  border: 1px;
   background-color: #616971!important;
+  border-style: solid;
 }
 
 /* portfolio */

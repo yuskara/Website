@@ -8,7 +8,7 @@ function Central() {
       {/* <!-- Main page --> */}
 
       <div class="central-div-welcome-content">
-        <h1>WellCome to the StartUP Team</h1>
+        <h1>Welcome to the StartUP Team</h1>
         <hr class="central-hr-welcome"></hr>
         <p>For all your professional web designing and development</p>
       </div>

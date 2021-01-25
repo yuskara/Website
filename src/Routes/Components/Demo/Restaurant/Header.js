@@ -1,6 +1,5 @@
 import React from "react";
-import "../Restaurant/RestaurantStyles/Header.css";
-
+import "../../../css/ResHeader.css";
 
 function Header() {
   return (

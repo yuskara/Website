@@ -1,6 +1,6 @@
 import React from "react";
-import "../Restaurant/RestaurantStyles/Menu.css";
-import menu from "../Restaurant/img/menu.jpg";
+import "../../../css/ResMenu.css";
+import menu from "../Restaurant/imgs/menu.jpg";
 
 function Menu() {
   return (

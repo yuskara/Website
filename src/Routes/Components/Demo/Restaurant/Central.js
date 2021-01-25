@@ -1,7 +1,7 @@
 import React from "react";
-import "../Restaurant/RestaurantStyles/HomeCenter.css";
+import "../../../css/ResCentral.css";
 
-function HomeCenter() {
+function Central() {
   return (
     <div className="restaurant_home_center">
       <h1>WELCOME</h1>  
@@ -14,4 +14,4 @@ function HomeCenter() {
   );
 }
 
-export default HomeCenter;
+export default Central;

@@ -1,6 +1,7 @@
 import React from "react";
-import "../Restaurant/RestaurantStyles/Menu.css";
-import menu from "../Restaurant/img/menu.jpg";
+import '../../../css/RestaurantMenu.css'
+import menu from "../../../imgs/menu.jpg";
+
 
 function Menu() {
   return (
@@ -9,15 +10,6 @@ function Menu() {
         <div className="gallery">
           <a target="_blank" href="img_5terre.jpg">
             <img src={menu} alt="Cinque Terre" width="600" height="400" />
-          </a>
-          <div className="desc">Add a description of the image here</div>
-        </div>
-      </div>
-
-      <div className="responsive">
-        <div className="gallery">
-          <a target="_blank" href="img_forest.jpg">
-            <img src={menu} alt="Forest" width="600" height="400" />
           </a>
           <div className="desc">Add a description of the image here</div>
         </div>

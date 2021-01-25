@@ -1,8 +1,7 @@
 import React,{ useState } from 'react';
 import {Link } from "react-router-dom";
 import styled from "styled-components";
-import logo_img from '../imgs/footer_logo.png';
-
+import logo_img from '../../imgs/footer_logo.png';
 
 const Nav = styled.nav`
   min-height: 9vh;

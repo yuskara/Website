@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Central.css';
+import '../../css/Central.css';
 
 
 function Central() {

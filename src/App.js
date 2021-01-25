@@ -17,6 +17,7 @@ function App() {
           <Particles
             className="Particless"
             paddingTop="153px"
+            marginBottom="50%"
             width="100vw"
             justifyContent="center"
             params={particlesConfig}

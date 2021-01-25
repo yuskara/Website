@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 .restaurant_home_center {
-     background-image: url('../img/restaurantBackground.jpg');
+     background-image: url('../Components/Demo/Restaurant/imgs/restaurantBackground.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

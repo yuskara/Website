@@ -9,10 +9,10 @@ import RestaurantHeader from "./Demo/Restaurant/RestaurantHeader";
 function Restaurant() {
   return (
     <Router>     
-    <RestaurantHeader />
-    <RestaurantHomeCenter />
-        <RestaurantMenu />
-        <RestaurantFooter />
+      <RestaurantHeader />
+      <RestaurantHomeCenter />
+      <RestaurantMenu />
+      <RestaurantFooter />
     </Router>
   );
 }

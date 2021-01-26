@@ -10,7 +10,6 @@
   margin-top: 22px;
   position: absolute;
   width: 100%;
-
   background-color: #151d2b;
   max-width: 1500px;
   margin: 0px auto;
@@ -70,6 +69,6 @@
     background-attachment: unset;
     background-clip: border-box;
     background-position: right;
-    background-position-x: right;
+    background-position-x: center;
   }
 }

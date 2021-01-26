@@ -1,7 +1,9 @@
 :root {
   --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
-
+* {
+box-sizing: border-box;
+}
 /*-- Body Reset --*/
 body {
   overflow-x: hidden;

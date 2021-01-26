@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../css/RestaurantHomeCenter.css";
+import "../../../css/ResCentral.css";
 import { useSpring, animated } from "react-spring";
 
 const calc = (x, y) => [
@@ -10,7 +10,7 @@ const calc = (x, y) => [
 const trans = (x, y, s) =>
   `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
-function HomeCenter() {
+function Central() {
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 1],
     config: { mass: 5, tension: 350, friction: 40 },
@@ -33,4 +33,4 @@ function HomeCenter() {
   );
 }
 
-export default HomeCenter;
+export default Central;

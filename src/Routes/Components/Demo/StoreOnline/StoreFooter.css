@@ -1,53 +1,3 @@
-/* .storeContainer{
-    background-color: beige;
-    color: #333;
-} */
-
-.slider-content{
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.image-size{
-    width: 1000px;
-    height: 600px;
-    border-radius: 10px;
-}
-.left-arrow{
-    position: absolute;
-    top: 50%;
-    right: 32px;
-    font-size: 3rem;
-    color: #000;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
-}
-.left-left{
-    position: absolute;
-    top: 50%;
-    left: 32px;
-    font-size: 3rem;
-    color: #000;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
-}
-
-/* ? .item and .iten.active as the map() */
-/* ? .slide and .alide.active as the way it is */
-.slide{
-    opacity: 0;
-    transition-duration: 1s ease;
-}
-.slide.active{
-    opacity: 1;
-    transition-duration: 1s;
-    transform: scale(1.08);
-}
-
 
 /* FOOTER */
 .store-footer-container{
@@ -108,6 +58,7 @@
 .store-footer-social {
     color: #fff;
     margin: 10px;
+    text-align: left;
 }
 
 .store-footer-link-social, 
@@ -161,15 +112,19 @@
 .store-footer-icon .fa-cc-visa:hover{
     color: #4DABD4;
 }
+.store-footer-icon .fa-cc-mastercard:hover{
+    color:  #c4302b;
+}
+.store-footer-icon .fa-paypal:hover{
+    color:  #c4c22b;
+}
 /* .store-footer-icon .fa-cc-mastercaed:hover{
     color: #4DABD4;
 } */
 
 .store-hr{
-    background: #fff;
-    margin: 10px 0;
-    /* margin-top: 15px; */
-    /* margin-bottom: 10px; */
+    background: #ffffff;
+    margin: 10px;
 }
 
 .store-copyright{

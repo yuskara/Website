@@ -1,92 +1,16 @@
 import React from "react";
 import "../Restaurant/RestaurantStyles/Menu.css";
-import menu from "../Restaurant/img/menu.jpg";
-
 function Menu() {
-  return (
-    <div className="Menu">
-      <div className="responsive">
-        <div className="gallery">
-          <a target="_blank" href="img_5terre.jpg">
-            <img src={menu} alt="Cinque Terre" width="600" height="400" />
-          </a>
-          <div className="desc">Add a description of the image here</div>
-        </div>
-      </div>
-
-      <div className="responsive">
-        <div className="gallery">
-          <a target="_blank" href="img_forest.jpg">
-            <img src={menu} alt="Forest" width="600" height="400" />
-          </a>
-          <div className="desc">Add a description of the image here</div>
-        </div>
-      </div>
-
-      <div className="responsive">
-        <div className="gallery">
-          <a target="_blank" href="img_lights.jpg">
-            <img src={menu} alt="Northern Lights" width="600" height="400" />
-          </a>
-          <div className="desc">Add a description of the image here</div>
-        </div>
-      </div>
-
-      <div className="responsive">
-        <div className="gallery">
-          <a target="_blank" href="img_lights.jpg">
-            <img src={menu} alt="Northern Lights" width="600" height="400" />
-          </a>
-          <div className="desc">Add a description of the image here</div>
-        </div>
-      </div>
-
-      <div className="responsive">
-        <div className="gallery">
-          <a target="_blank" href="img_lights.jpg">
-            <img src={menu} alt="Northern Lights" width="600" height="400" />
-          </a>
-          <div className="desc">Add a description of the image here</div>
-        </div>
-      </div>
-
-      <div className="responsive">
-        <div className="gallery">
-          <a target="_blank" href="img_lights.jpg">
-            <img src={menu} alt="Northern Lights" width="600" height="400" />
-          </a>
-          <div className="desc">Add a description of the image here</div>
-        </div>
-      </div>
-
-      <div className="responsive">
-        <div className="gallery">
-          <a target="_blank" href="img_lights.jpg">
-            <img src={menu} alt="Northern Lights" width="600" height="400" />
-          </a>
-          <div className="desc">Add a description of the image here</div>
-        </div>
-      </div>
-
-      <div className="responsive">
-        <div className="gallery">
-          <a target="_blank" href="img_lights.jpg">
-            <img src={menu} alt="Northern Lights" width="600" height="400" />
-          </a>
-          <div className="desc">Add a description of the image here</div>
-        </div>
-      </div>
-
-      <div className="responsive">
-        <div className="gallery">
-          <a target="_blank" href="img_mountains.jpg">
-            <img src={menu} alt="Mountains" width="600" height="400" />
-          </a>
-          <div className="desc">Add a description of the image here</div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default Menu;
+    return (
+        <nav className="rest_menu">
+            <ul className="rest_menu-list" >
+                <li><a href="#" className="rest_menu-link">Home</a></li>
+                <li ><a href="#services" className="rest_menu-link">Services</a></li>
+                <li><a href="#work" className="rest_menu-link">Work</a></li>
+                <li><a href="#contact" className="rest_menu-link">Contact</a></li>
+        </ul>
+      </nav>
+      );
+  }
+  
+  export default Menu;

@@ -11,9 +11,9 @@ function Restaurant() {
   return (
     <Router>     
     <RestaurantHeader />
+    <RestaurantMenu />
     <RestaurantHomeCenter />
-        <RestaurantMenu />
-        <RestaurantFooter />
+    <RestaurantFooter />
     </Router>
   );
 }

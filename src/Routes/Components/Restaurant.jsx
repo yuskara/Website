@@ -9,9 +9,9 @@ import Header from "./Demo/Restaurant/Header";
 // Swith Component renders the first match and ignore the rest.//   {/* Mutaza and Presefoni Part */}
 function Restaurant() {
   return (
-    <Router>     
+    <Router>   
       <Header />
-      <Menu />
+      <Menu /> 
       <Central />
       <Footer />
     </Router>

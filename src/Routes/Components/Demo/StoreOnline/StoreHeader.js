@@ -1,5 +1,5 @@
 import React from 'react';
-import './Storeheader.css';
+import '../../../css/Storeheader.css';
 import OwlCarousel from "react-owl-carousel3";
 
 function ShiftHeader() {
@@ -9,7 +9,7 @@ function ShiftHeader() {
     }
 }
   return (
-    <div className='headerContent'>
+    <div className='store-headerContent'>
         <OwlCarousel 
             className="owl-theme"
             loop  dotsContainer={false} dots={false} autoplay smartSpeed={1500} dots={true}  nav responsive={responsive}
@@ -27,7 +27,7 @@ function ShiftHeader() {
 
 function Extra(){
   return(
-    <div className='extra'>
+    <div className='store-header-extra'>
 
     </div>
   )
@@ -35,8 +35,8 @@ function Extra(){
 
 function HeaderCard({src, alt}){
   return(
-          <a href='#' className='headerCard'> 
-            <div className='headerImg'>
+          <a href='#' className='store-headerCard'> 
+            <div className='store-headerImg'>
                 <img src={src} alt={alt} />
             </div> 
         </a>

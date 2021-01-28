@@ -58,7 +58,6 @@
 .store-footer-social {
     color: #fff;
     margin: 10px;
-    text-align: left;
 }
 
 .store-footer-link-social, 
@@ -76,15 +75,15 @@
 
 .store-footer-icon {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin-top: 25px;
     padding: 3px;
     justify-content: space-between;
 }
-.fa-facebook  {
+.store-footer-icon .fa-facebook  {
     margin-top: 15px;
 }
-.fa-cc-visa{
+.store-footer-icon .fa-cc-visa{
     margin-top: 10px;
 }
 .store-footer-icon:hover{
@@ -113,18 +112,15 @@
     color: #4DABD4;
 }
 .store-footer-icon .fa-cc-mastercard:hover{
-    color:  #c4302b;
+    color: #c4302b;
 }
 .store-footer-icon .fa-paypal:hover{
-    color:  #c4c22b;
+    color: #3f729b;
 }
-/* .store-footer-icon .fa-cc-mastercaed:hover{
-    color: #4DABD4;
-} */
 
 .store-hr{
-    background: #ffffff;
-    margin: 10px;
+    background: #fff;
+    margin: 10px ;
 }
 
 .store-copyright{

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Storecentral.css';
+import '../../../css/Storecentral.css';
 import OwlCarousel from "react-owl-carousel3";
 
 function ShiftPictures() {
@@ -21,7 +21,7 @@ function ShiftPictures() {
       }
   }
   return (
-    <div className='carousContent'>
+    <div className='store-central-carousContent'>
         <OwlCarousel 
             className="owl-theme"
             loop  dotsContainer={false} dots={false} autoplay smartSpeed={1500}  nav
@@ -55,9 +55,9 @@ function ShiftPictures() {
 
 function ShiftCard({src, alt}){
   return(
-          <a href='#'><div className='card'> 
-            <div className='shiftImg'>
-                <img src={src} alt={alt} className="carouselImg" />
+          <a href='#'><div className='store-central-card'> 
+            <div className='store-central-shiftImg'>
+                <img src={src} alt={alt} className="store-central-carouselImg" />
             </div> 
             <span>Use it if owl items are deep nested inside</span>
           </div></a>
@@ -66,8 +66,8 @@ function ShiftCard({src, alt}){
 
 function FourSection(){
   return(
-    <div className='section'>
-        <div className='fourSection'>
+    <div className='store-central-section'>
+        <div className='store-central-fourSection'>
             <FourCard src='https://images.unsplash.com/photo-1548877699-755d4d9a19af?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8bW9kZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'/>
             <FourCard src='https://images.unsplash.com/photo-1528841684330-994c5cca9d69?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjN8fG1vZGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'/>
             <FourCard src='https://images.unsplash.com/photo-1583759136431-9d70db2eb04c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fG1vZGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'/>
@@ -79,11 +79,11 @@ function FourSection(){
 
 function FourCard({src}){
   return(
-          <a href='#' className='fourCard'>
-              <img className='fourCard_img' src={src} alt='Picture' />
-              <div className='fourCard_hover'>
-                  <div className='heart'>&#10084;</div>
-                  <p className='sms'>&#x1F5E8;</p>
+          <a href='#' className='store-central-fourCard'>
+              <img className='store-central-fourCard_img' src={src} alt='Picture' />
+              <div className='store-central-fourCard_hover'>
+                  <div className='store-central-heart'>&#10084;</div>
+                  <p className='store-central-sms'>&#x1F5E8;</p>
               </div>
           </a>
   )
@@ -91,8 +91,8 @@ function FourCard({src}){
 
 function NewProducts(){
     return(
-      <div className='allNew' >
-        <div className='newProducts'>
+      <div className='store-central-allNew' >
+        <div className='store-central-newProducts'>
             <NewCard src='https://images.unsplash.com/photo-1560253414-f65d1f5a1a37?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8bW9kZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
             alt='Picture'/>
              <NewCard src='https://images.unsplash.com/photo-1583759136431-9d70db2eb04c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fG1vZGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
@@ -106,8 +106,8 @@ function NewProducts(){
 
 function NewCard({src, alt}){
   return(
-        <a href='#' className='new'>
-            <div className='newImg'><img src={src} alt='' /></div>
+        <a href='#' className='store-central-new'>
+            <div className='store-central-newImg'><img src={src} alt='' /></div>
             <button>SHOP NEW IN</button>
         </a>
   )

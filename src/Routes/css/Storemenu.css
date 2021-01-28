@@ -2,14 +2,14 @@
     margin: 0;
 }
 
-#logMenu{
+#store-menu-logMenu{
     width: 100%;
     font-weight: bold;
     font-family: 'montserrat', Helvetica, sans-serif;
     font-size: 1.1em;
 }
 
-#loginClient{
+#store-menu-loginClient{
     width: 100%;
     background: #D6D6D6;
     padding-top: 1.5em;
@@ -18,16 +18,16 @@
     font-size: 0.8em;
 }
 
-.client{
+.store-menu-client{
     margin-left: 3em;
     float: left;
 }
-.signing{
+.store-menu-signing{
     margin-right: 3em;
     float: right;
 }
 
-.storeMenu{
+.store-menu-storeMenu{
     height: 80px;
     width: 100%;
     display: flex;
@@ -38,7 +38,7 @@
     
 }
 
-#content{
+#store-menu-content{
     height: 90%;
     width: 65%;
     display: flex;
@@ -47,20 +47,20 @@
     align-items: center;
     list-style: none;
 }
-#content li a {
+#store-menu-content li a {
     color: white;
     text-decoration: none;
 }
-.text{
+.store-menu-text{
     margin: 0.3em;
     padding: 0.4em;
     transition: 1s;
 }
-.text:hover{
+.store-menu-text:hover{
     background-color: rgb(114, 85, 21); ;
     border-radius: 10px;
 }
-#logo{
+#store-menu-logo{
     height: 90%;
     width: 13%;
     display: flex;
@@ -68,7 +68,7 @@
     justify-content: center;
 }
 
-#right{
+#store-menu-right{
     height: 90%;
     display: flex;
     align-items: center;
@@ -97,19 +97,19 @@ input[placeholder='Search']::before{
     width: 4%;
 }
 
-.myImg1, .myImg2{
+.store-menu-myImg1, .store-menu-myImg2{
     width: 25px;
     height: 25px
 }
 
-.myImg1{
+.store-menu-myImg1{
     margin-left: 1em;
     margin-right: 1em;
 }
-.myImg2{
+.store-menu-myImg2{
     margin-right: 1em;
 }
-.checkbtn{
+.store-menu-checkbtn{
     font-size: 40px;
     color: white;
     float: right;
@@ -118,11 +118,11 @@ input[placeholder='Search']::before{
     cursor: pointer;
     display: none;
 }
-#check{
+#store-menu-check{
     display: none;
 }
 
-.formSearch:focus-within {
+.store-menu-formSearch:focus-within {
     position: absolute;
     width: 70%;
     left: 20%;
@@ -131,24 +131,24 @@ input[placeholder='Search']::before{
 
 
 @media screen and (max-width: 1230px) {
-	.myImg2{
+	.store-menu-myImg2{
         display: none;
     }
 }
 @media screen and (max-width: 1200px) {
-    .formSearch:focus-within {
+    .store-menu-formSearch:focus-within {
         width: 65%;
         left: 17%;
     }
-	.checkbtn{
+	.store-menu-checkbtn{
         display: block;
         position: absolute;
         right: 0;
     }
-    .myImg2{
+    .store-menu-myImg2{
         display: block;
     }
-    #content{
+    #store-menu-content{
         position: absolute;
         height: 55vh;
         background: #2c3e50;
@@ -162,7 +162,7 @@ input[placeholder='Search']::before{
         z-index: 5;
     }
    
-    .text {
+    .store-menu-text {
         width: 99%;
         margin: 1px;
         background-color: rgb(238, 160, 16);
@@ -170,7 +170,7 @@ input[placeholder='Search']::before{
         height: 5vh;
         
     }
-    .text a{
+    .store-menu-text a{
         width: 99%;
         margin-left: 2em;
         height: 100%;
@@ -178,52 +178,52 @@ input[placeholder='Search']::before{
         align-items: center;
     }
 
-    #check:checked ~ #content{
+    #store-menu-check:checked ~ #store-menu-content{
         left: 0;
     }
-    #right{
+    #store-menu-right{
         width: 82%;
         justify-content: flex-end;
         margin-right: 4.5em;
     }
 
-    #logo{
+    #store-menu-logo{
         margin-left: 1em;
     }
 
 }
 @media screen and (max-width: 992px) {
-    #logo{
+    #store-menu-logo{
         margin-left: 3em;
     }
-    .storeMenu{
+    .store-menu-storeMenu{
         height: 140px;
         align-items: flex-start;
         width: 100%;
     }
-    .formSearch{
+    .store-menu-formSearch{
         position: absolute;
         top: 135px    
     }
    
-    #logo, #right{
+    #store-menu-logo, #store-menu-right{
         height: 80px;
     }
-    .formSearch:focus-within {
+    .store-menu-formSearch:focus-within {
         position: absolute;
         width: 90%;
         left: 5%;
     }
-    .formSearch{
+    .store-menu-formSearch{
         width: 90%;
         left: 5%;
         display: flex;
         justify-content: center;
     }
-    #content{
+    #store-menu-content{
         top: 190px
     }
-    .text{
+    .store-menu-text{
         height: 5vh;
     }
 }

@@ -2,11 +2,11 @@
     margin: 0;
 }
 
-.carousContent{
+.store-central-carousContent{
     overflow: hidden;
     width: 100%;
 }
-.card{
+.store-central-card{
     font-family: 'montserrat', Helvetica, sans-serif;
     width: 100%;
     color:black;
@@ -18,15 +18,15 @@
     justify-content: center;
     flex-direction: column;
 }
-.shiftImg{
+.store-central-shiftImg{
     height: 50vh;
     margin: 0.5em;
 }
-.shiftImg img{
+.store-central-shiftImg img{
     height: 100%;
     width: 16vh;
 }
-.shiftImg span{
+.store-central-shiftImg span{
     font-size: 1rem;
     text-align: center;
 }
@@ -53,7 +53,7 @@ a{
     justify-content: space-between;
 }
 
-.allNew, .section, .carousContent{
+.store-central-allNew, .store-central-section, .store-central-carousContent{
     /* background-color: #cccccc;  */
     background-position: center;
     background-repeat: no-repeat; 
@@ -73,7 +73,7 @@ a{
     background-image: url('https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGVzaG9wJTIwYmFja2dyb3VuZHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')
 } */
 
-.newProducts{
+.store-central-newProducts{
     padding: 1em 0.5em;
     display: flex;
     flex-direction: row;
@@ -82,27 +82,27 @@ a{
     flex-wrap: wrap;
     z-index: 0;
 }
-.newImg{
+.store-central-newImg{
     width: 100%;
     height: 90%;
 }
-.new{
+.store-central-new{
     width: 32.5%;
     height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.new button{
+.store-central-new button{
     height: 9%;
     font-weight: bold;
 }
-.new img{
+.store-central-new img{
     width: 100%;
     height: 100%;
 }
 
-.fourSection{
+.store-central-fourSection{
     box-sizing: border-box;
     display: flex; 
     flex-direction: row;    
@@ -111,19 +111,19 @@ a{
     z-index: 0;
     padding: 0 0.5%;
 }
-.fourCard{
+.store-central-fourCard{
     position: relative;
     width: 24.8%;
     height: 60vh;
 }
 
-.fourCard_img {
+.store-central-fourCard_img {
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.fourCard_hover{
+.store-central-fourCard_hover{
     position: absolute;
     top: 0;
     left: 0;
@@ -139,69 +139,69 @@ a{
     opacity: 0;
     transition: opacity 1s;
 }
-.fourCard_hover > * {
+.store-central-fourCard_hover > * {
     transform: translateY(100px);
     transition: transform 1s;
 }
 
-.fourCard_hover:hover > * {
+.store-central-fourCard_hover:hover > * {
     transform: translateY(0);
 }
 
-.fourCard_hover:hover{
+.store-central-fourCard_hover:hover{
     opacity: 1;
 }
 
-.heart, .sms {
+.store-central-heart, .store-central-sms {
     font-size: 1.5em;
     font-weight: bold;
     margin: 0.3em;
 }
 
 @media screen and (max-width: 992px) {
-    .fourSection{
+    .store-central-fourSection{
         justify-content: space-between;
     }
-    .fourCard{
+    .store-central-fourCard{
         flex-direction: column;
         width: 49.5%;
         padding: 0.5% 0;
         height: 68vh;
     } 
-    .new{
+    .store-central-new{
         height: 65vh;
     }
    
 }
 @media screen and (max-width: 768px) {
-    .newProducts{
+    .store-central-newProducts{
         justify-content: center;
     }
-   .new{
+   .store-central-new{
        height: 75vh;
        width: 85vw;
        flex-direction: column;
        padding-bottom: 2em;
    } 
-   .shiftImg{
+   .store-central-shiftImg{
        height: 60vh;
    }
 }
 @media screen and (max-width: 500px) {
-    .fourSection{
+    .store-central-fourSection{
         justify-content: center;
     }
 
-    .fourCard{
+    .store-central-fourCard{
         width: 90%;
         height: 65vh;
     }
     
-    .shiftImg {
+    .store-central-shiftImg {
         width: 90%;
     }
 
-    .shiftImg img{
+    .store-central-shiftImg img{
         width: 100%;
     }  
 }

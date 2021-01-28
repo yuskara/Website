@@ -12,7 +12,8 @@ function Footer() {
     return (<>
         <div class="ResFooter-div-wrapper">
             <div  class="ResFooter-div-inner">
-            <div id="ResFooter-footer-box2" class="ResFooter-footer-boxes">
+            <div id="ResFooter-footer-box2" 
+            class="ResFooter-footer-boxes">
                     <h1><span>YuKa </span> Restaurant</h1>
                     <p>Wood fired Neapolitan pizzas prepared 
                      with the purestrespect for traditions, 

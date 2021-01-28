@@ -16,15 +16,6 @@ function Menu() {
 
       <div className="responsive">
         <div className="gallery">
-          <a target="_blank" href="img_forest.jpg">
-            <img src={menu} alt="Forest" width="600" height="400" />
-          </a>
-          <div className="desc">Add a description of the image here</div>
-        </div>
-      </div>
-
-      <div className="responsive">
-        <div className="gallery">
           <a target="_blank" href="img_lights.jpg">
             <img src={menu} alt="Northern Lights" width="600" height="400" />
           </a>

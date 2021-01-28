@@ -8,7 +8,7 @@
   height: 72vh;
   background-color: bottom;
   margin-top: 22px;
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   background-color: #151d2b;
   max-width: 1500px;
@@ -32,14 +32,17 @@
   letter-spacing: -1.6px;
   margin-bottom: 0px;
   position: relative;
-  color: #fdfeff;
+  color: #c79c60;
+  font-family: 'Times New Roman', serif;
   height: 82px;
   line-height: 84px;
   overflow: hidden;
 }
-
+.restaurant_home_center h1 > p {
+  padding: 20px;
+}
 .restaurant_home_center p {
-  color: rgb(255, 255, 255);
+  color: #c79c60;
   font-size: 23px;
   text-align: initial;
   padding: 7px;

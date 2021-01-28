@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router } from "react-router-dom";
 import particlesConfig from "../../config/particlesConfig";
 import Particles from "react-particles-js";
+import { BrowserRouter as Router } from "react-router-dom";
 import Menu from "./Home/Menu";
 import Header from "./Home/Header";
 import Central from "./Home/Central";

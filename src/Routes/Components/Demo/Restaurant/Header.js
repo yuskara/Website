@@ -5,8 +5,17 @@ function Header() {
   return (
     <div id="header_id" className="home_header">
       <ul>
+        <li className="categories">
+          <a href="#">Amnick Logo</a>
+          <ul>
+          <li>
+          <a href="#">salad</a>
+        </li>
         <li>
-          <a href="#">AMNICK</a>
+        <a href="#">salad</a>
+      </li>
+          </ul>
+
         </li>
         <li className="categories">
           <a href="#">Menu</a>
@@ -14,12 +23,7 @@ function Header() {
             <li>
               <a href="#">salad</a>
             </li>
-            <li>
-              <a href="#">sandwich</a>
-            </li>
-            <li>
-              <a href="#">bread</a>
-            </li>
+
             <li>
               <a href="#">steak.</a>
             </li>

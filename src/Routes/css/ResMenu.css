@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.rest_menu {
+  grid-row: 1/2;
+}
+
+.rest_logo {
+  margin-right: 3rem;
+}
+
+.rest_menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 2rem;
+  z-index: 10;
+  position: relative;
+}
+
+.rest_menu-link:before {
+  opacity: 0;
+  content: "";
+  background-color: #fcda9a;
+  height: 8px;
+  width: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  transform: translateY(-3px);
+  margin-right: 4px;
+}
+
+.rest_menu-link:link,
+.rest_menu-link:visited {
+  font-size: 0.9rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  display: block;
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+
+.rest_menu-link:hover,
+.rest_menu-link:active {
+  color: #fcda9a;
+  transform: translateY(-3px);
+}
+
+.rest_menu-link:hover:before {
+  opacity: 1;
+}
+
+ul li ul {
+  visibility: hidden;
+  opacity: 1;
+  position: absolute;
+  transition: all 0.2s ease;
+  list-style: none;
+  transform: translateX(21%);
+  margin-top: -1.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: inherit;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  border-bottom: 1px lawngreen;
+}
+
+ul li ul li a {
+  font-size: 0.9rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  display: block;
+  padding: 0.5rem;
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
+}
+
+ul li ul li a:hover {
+  background-color: #fcda9a;
+}

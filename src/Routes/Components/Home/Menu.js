@@ -1,8 +1,7 @@
 import React,{ useState } from 'react';
 import {Link } from "react-router-dom";
 import styled from "styled-components";
-import logo_img from '../imgs/footer_logo.png';
-
+import logo_img from '../../imgs/footer_logo.png';
 
 const Nav = styled.nav`
   min-height: 9vh;
@@ -139,7 +138,7 @@ function Menu() {
       <Logo src={logo_img} alt="logo"/>
         <Navbar>
           <Item>
-            <StyledLink to="">Home</StyledLink>
+            <StyledLink to="/">Home</StyledLink>
           </Item>
           <Item>
             <StyledLink to="">About us</StyledLink>
@@ -148,7 +147,7 @@ function Menu() {
             <StyledLink to="">Services</StyledLink>
           </Item>
           <Item>
-            <StyledLink to="">Our Work</StyledLink>
+            <StyledLink to="/restaurant">Our Work</StyledLink>
           </Item>
         </Navbar>
         <NavIcon onClick={() => setToggle(!toggle)}>
@@ -160,7 +159,7 @@ function Menu() {
       <Overlay toggle={!toggle}>
         <OverlayMenu toggle={!toggle}>
         <Item>
-            <StyledLink to="">Home</StyledLink>
+            <StyledLink to="/">Home</StyledLink>
           </Item>
           <Item>
             <StyledLink to="">About us</StyledLink>
@@ -169,7 +168,7 @@ function Menu() {
             <StyledLink to="">Services</StyledLink>
           </Item>
           <Item>
-            <StyledLink to="">Our Work</StyledLink>
+            <StyledLink to="/restaurant">Our Work</StyledLink>
           </Item>
         </OverlayMenu>
       </Overlay>

@@ -1,11 +1,12 @@
 import React from 'react';
+import '../../css/Header.css';
 
 function Header() {
   return (
-    <div className="homecenter">
+    <div className="home_header_center">
     <div>
-      <div styles="border-radius: 0px" className="img_center">
-        <div className="tit_welcome">
+      <div styles="border-radius: 0px" className="header_img_center">
+        <div className="header_title">
           <h1>Welcome to Amnick!</h1>
           <h4>
             We are a combination of City <br />
@@ -14,12 +15,12 @@ function Header() {
           <div>
             <p>
               Whatever your life’s goals, <br /> our financial professionals
-            <br />
+              <br />
               can help design a strategy tailored to your specific needs.
               <br />
             </p>
           </div>
-          <button className="button1">Explore</button>
+          <button className="header_button">Explore</button>
         </div>
       </div>
     </div>

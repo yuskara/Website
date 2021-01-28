@@ -1,12 +1,12 @@
 import React from 'react';
-import footer_img from '../imgs/footer_logo.png';
-import facebook from '../imgs/facebook.png';
-import instagram from '../imgs/instagram.jpg';
-import twitter from '../imgs/twitter.jpg';
-import youtube from '../imgs/youtube.jpg' ;
-import phone from '../imgs/phone.jpg';
-import mail from '../imgs/mail.jpg';
-import '../css/Footer.css';
+import footer_img from '../../imgs/footer_logo.png';
+import facebook from '../../imgs/facebook.png';
+import instagram from '../../imgs/instagram.jpg';
+import twitter from '../../imgs/twitter.jpg';
+import youtube from '../../imgs/youtube.jpg' ;
+import phone from '../../imgs/phone.jpg';
+import mail from '../../imgs/mail.jpg';
+import '../../css/Footer.css';
 
 function Footer() {
     return (

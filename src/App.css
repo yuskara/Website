@@ -1,59 +1,9 @@
-:root {
-  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-}
 
-/*-- Body Reset --*/
 body {
   overflow-x: hidden;
-  font-family: 'Montserrat', sans-serif;
   background-color: #fff;
   line-height: 1.5rem;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-
-hr {
-  width: 30%;
-  background-color: #68a0d2;
-  border: 1px #68a0d2 solid;
-}
-
-/*
-hr:hover {
-  transform: scale(1.5);
-}
-*/
-
-img {
-  max-width: 100%;
-}
-
- 
-li {
-  color: white;
-}
-
-p {
-  color: #616971;
-}
-
-ul {
-  padding-left: 0px;
-  padding-right: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-.App {
-  text-align: center;
-  background-color: rgb(241, 242, 243);
-}
-
-/* RESPONSIVENESS*/
-/* Mobile phones */
-@media screen and (max-width: 450px) {
-	.nav-gen-menu{
-    display: none;
-  }
-
-}
-
-

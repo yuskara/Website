@@ -18,7 +18,7 @@ function Menu() {
                     </ul>
                 </li>
                 <li><a href="#" className="rest_menu-link">Contact</a></li>
-        </ul>
+            </ul>
       </nav>
       );
   }

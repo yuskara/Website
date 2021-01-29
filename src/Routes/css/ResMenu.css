@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 .rest_menu {
-  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 5rem;
 }
 
 .rest_logo {
@@ -11,23 +17,18 @@
 .rest_menu-list {
   list-style: none;
   display: flex;
+  width: inherit;
   justify-content: center;
-  align-items: center;
-  grid-gap: 2rem;
-  z-index: 10;
-  position: relative;
 }
 
-.rest_menu-link:before {
+.rest_menu-link::before {
   opacity: 0;
   content: "";
   background-color: #fcda9a;
   height: 8px;
   width: 8px;
-  display: inline-block;
   border-radius: 50%;
-  transform: translateY(-3px);
-  margin-right: 4px;
+  transform: translate(-100%, 100%);
 }
 
 .rest_menu-link:link,
@@ -40,6 +41,7 @@
   text-align: center;
   display: block;
   padding: 1.5rem;
+  margin: 1rem;
   transition: all 0.2s;
 }
 
@@ -49,7 +51,7 @@
   transform: translateY(-3px);
 }
 
-.rest_menu-link:hover:before {
+.rest_menu-link:hover::before {
   opacity: 1;
 }
 

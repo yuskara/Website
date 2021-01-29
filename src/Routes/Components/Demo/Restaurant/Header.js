@@ -13,9 +13,7 @@ function Header() {
             <img src={logo} alt="Logo" className="tm-site-logo" />
             <h1 className="tm-site-name tm-handwriting-font">Amnick</h1>
           </div>
-          <div className="mobile-menu-icon">
-            <i className="fa fa-bars"></i>
-          </div>
+     
           <nav className="tm-nav">
             <ul>
               <li><a href="index.html" className="active">Home</a></li>

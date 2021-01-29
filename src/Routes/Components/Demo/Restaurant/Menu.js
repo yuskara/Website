@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../css/ResMenu.css";
-import menu from "../Restaurant/imgs/menu.jpg";
+import menu from "../../../imgs/menu.jpg";
 
 function Menu() {
   return (
@@ -79,5 +79,4 @@ function Menu() {
     </div>
   );
 }
-
 export default Menu;

@@ -8,12 +8,12 @@ const calc = (x, y) => [
   1.1,
 ];
 const trans = (x, y, s) =>
-  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+  `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 function Central() {
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 1],
-    config: { mass: 5, tension: 350, friction: 40 },
+    config: { mass: 5, tension: 150, friction: 20 },
   }));
 
   return (
@@ -23,12 +23,19 @@ function Central() {
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
       style={{ transform: props.xys.interpolate(trans) }}
     >
-      <h1>WELCOME</h1>
-      <p>
+      <h1 className="res_title_h1">WELCOME</h1>
+      <p className="res_paragraph_p">
         Dear guests, you are welcomed to dine with us at good food rastaurant we
         will serve you with the mouth watering dishes. Have a pleasant dining
         experience.
       </p>
+      <div className="res_sup_icon">
+        <sup>&darr;</sup>
+      </div>
+
+      <a href="#" className="res_button">
+        <span className="res_span">Book Now</span>
+      </a>
     </animated.div>
   );
 }

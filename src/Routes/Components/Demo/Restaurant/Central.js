@@ -1,6 +1,5 @@
 import React from "react";
-import "../../../css/ResCentral.css";
-import { useSpring, animated } from "react-spring";
+import '../../../css/ResCentral.css';
 
 const calc = (x, y) => [
   -(y - window.innerHeight / 2) / 20,

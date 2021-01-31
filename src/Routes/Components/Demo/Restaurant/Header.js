@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import "../../../css/ResHeader.css";
 import logo from "../../../imgs/footer_logo.png";
 

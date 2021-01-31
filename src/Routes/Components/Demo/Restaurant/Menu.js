@@ -1,5 +1,6 @@
 import React from "react";
 import "../../../css/ResMenu.css";
+import logo_img from './imgs/rest_logo.png';
 import menu from "../../../imgs/menu.jpg";
 
 function Menu() {

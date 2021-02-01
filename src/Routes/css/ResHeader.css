@@ -50,6 +50,7 @@
 .rest_header-line {
   grid-row: 3/4;
   grid-column: 1/-1;
+}
 
 .container {
   max-width: 960px;

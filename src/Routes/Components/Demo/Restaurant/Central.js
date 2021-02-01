@@ -1,4 +1,5 @@
 import React from "react";
+import {useSpring, animated} from 'react-spring';
 import '../../../css/ResCentral.css';
 
 const calc = (x, y) => [

@@ -6,13 +6,12 @@ import Footer from "./Demo/Restaurant/Footer";
 import Menu from "./Demo/Restaurant/Menu";
 import Header from "./Demo/Restaurant/Header";
 
-// Swith Component renders the first match and ignore the rest.//   {/* Mutaza and Presefoni Part */}
 function Restaurant() {
   return (
     <Router>   
       <Header />
-      <Menu /> 
       <Central />
+      <Menu /> 
       <Footer />
     </Router>
   );

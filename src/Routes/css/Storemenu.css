@@ -1,0 +1,232 @@
+/* *{
+    margin: 0;
+} */
+
+#store-menu-logMenu{
+    width: 100%;
+    font-weight: bold;
+    font-family: 'montserrat', Helvetica, sans-serif;
+    font-size: 1.1em;
+}
+
+#store-menu-loginClient{
+    width: 100%;
+    /* background: #f563e9; */
+    /* background: #cc90df; */
+    background: #7fadf3;
+    padding-top: 1.5em;
+    padding-bottom: 2rem;
+    margin-bottom: 1px;
+    font-size: 0.9em;
+}
+
+.store-menu-client{
+    margin-left: 3em;
+    float: left;
+}
+.store-menu-signing{
+    margin-right: 3em;
+    float: right;
+}
+
+.store-menu-storeMenu{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(236, 180, 243);
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+#store-menu-content{
+    height: 90%;
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+#store-menu-content li a {
+    color: white;
+    text-decoration: none;
+}
+.store-menu-text{
+    font-size: 16px;
+    margin: 0.3em;
+    padding: 0.4em;
+    transition: 1s;
+}
+.store-menu-text:hover{
+    background-color: rgb(114, 85, 21);
+    border-radius: 10px;
+}
+#store-menu-logo{
+    height: 90%;
+    width: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#store-menu-right{
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-search{
+    background: #fff;
+    border: none;
+    font-size: 0.9em;
+    width: 100%;
+    padding: 0 ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+input[placeholder='Search']{
+    border: none;
+    font-size: 1.1em;
+    width: 96.5%;
+    padding: 8px 0;
+}
+input[placeholder='Search']::before{
+    width: 4%;
+}
+
+.store-menu-myImg1, .store-menu-myImg2{
+    width: 25px;
+    height: 25px
+}
+
+.store-menu-myImg1{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.store-menu-myImg2{
+    margin-right: 1em;
+}
+.store-menu-checkbtn{
+    font-size: 40px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#store-menu-check{
+    display: none;
+}
+
+.store-menu-formSearch:focus-within {
+    position: absolute;
+    width: 70%;
+    left: 20%;
+    
+}
+
+
+@media screen and (max-width: 1230px) {
+	.store-menu-myImg2{
+        display: none;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .store-menu-formSearch:focus-within {
+        width: 65%;
+        left: 17%;
+    }
+	.store-menu-checkbtn{
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+    .store-menu-myImg2{
+        display: block;
+    }
+    #store-menu-content{
+        position: absolute;
+        height: 55vh;
+        background: #2c3e50;
+        top:  130px;
+        text-align: left;
+        justify-content: flex-start;
+        width: 100%; 
+        flex-direction: column;
+        left: -105%;
+        transition: all .5s;
+        z-index: 5;
+    }
+   
+    .store-menu-text {
+        width: 99%;
+        margin: 1px;
+        background-color: rgb(238, 160, 16);
+        color: black;
+        height: 5vh;
+        
+    }
+    .store-menu-text a{
+        width: 99%;
+        margin-left: 2em;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    #store-menu-check:checked ~ #store-menu-content{
+        left: 0;
+    }
+    #store-menu-right{
+        width: 82%;
+        justify-content: flex-end;
+        margin-right: 4.5em;
+    }
+
+    #store-menu-logo{
+        margin-left: 1em;
+    }
+
+}
+@media screen and (max-width: 992px) {
+    #store-menu-logo{
+        margin-left: 3em;
+    }
+    .store-menu-storeMenu{
+        height: 140px;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .store-menu-formSearch{
+        position: absolute;
+        top: 135px    
+    }
+   
+    #store-menu-logo, #store-menu-right{
+        height: 80px;
+    }
+    .store-menu-formSearch:focus-within {
+        position: absolute;
+        width: 90%;
+        left: 5%;
+    }
+    .store-menu-formSearch{
+        width: 90%;
+        left: 5%;
+        display: flex;
+        justify-content: center;
+    }
+    #store-menu-content{
+        top: 190px
+    }
+    .store-menu-text{
+        height: 5vh;
+    }
+}

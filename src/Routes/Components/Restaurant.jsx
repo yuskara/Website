@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import Central from "./Demo/Restaurant/Central";
@@ -9,11 +9,10 @@ import Header from "./Demo/Restaurant/Header";
 // Swith Component renders the first match and ignore the rest.//   {/* Mutaza and Presefoni Part */}
 function Restaurant() {
   return (
-    <Router>   
-      <Header />
-      <Central />
-      <Menu /> 
-      <Footer />
+    <Router>
+    <Header />
+    <Central />
+    <Footer />
     </Router>
   );
 }

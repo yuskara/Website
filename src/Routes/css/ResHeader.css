@@ -9,7 +9,7 @@
   grid-template-columns: 1fr repeat(8, minmax(min-content, 1fr)) 1fr;
   justify-items: center;
   grid-row-gap: 1.5rem;
-  background-image: url(../Components/Demo/Restaurant/imgs/rest-header.jpg);
+  /* background-image: url(../Components/Demo/Restaurant/imgs/rest-header.jpg); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -50,7 +50,7 @@
 .rest_header-line {
   grid-row: 3/4;
   grid-column: 1/-1;
-
+}
 .container {
   max-width: 960px;
 }
@@ -127,7 +127,7 @@
 .rest_header-divimg1 {
   grid-column: 1/3;
   grid-row: 2/-1;
-  background-image: url(../Components/Demo/Restaurant/imgs/rest-header1.png);
+  /* background-image: url(../Components/Demo/Restaurant/imgs/rest-header1.png); */
   background-size: cover;
   background-position: center;
   z-index: 1000;

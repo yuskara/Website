@@ -1,23 +1,212 @@
-.third_menu_home_section{
-    /* background-image: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8cmVzdGF1cmFudHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); */
-    width: 100%;
-    background-size: cover;
-    height: 100vh;
-    margin-bottom: 10%;
-    background-color: coral;
-    position: relative;
-}
-.third_menu_home_section {
-    display: flex;
-    flex: 2/4;
-    flex-wrap: wrap;
-    justify-content: space-around;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
+.rest_menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
 }
-.third_menu_home_section img {
-    padding: 2px;
-     margin: 2px;
-     justify-content: space-between;
-     width: 50%;
-    
+
+.rest_menu.active {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  height: 6.5rem;
+}
+
+.rest_logo {
+  margin-right: 4rem;
+}
+
+.rest_menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1056px) {
+  .rest_menu {
+    justify-content: space-around;
+  }
+
+  .rest_menu-list {
+    display: none;
+  }
+  .rest_logo {
+    display: block;
+  }
+
+  .rest_menu {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+.rest_menu-link::before {
+  opacity: 0;
+  content: "";
+  background-color: #fcda9a;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  transform: translate(-100%, 100%);
+}
+
+.rest_menu-link:link,
+.rest_menu-link:visited {
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  display: block;
+  padding: 1.5rem;
+  margin: 1rem;
+  transition: all 0.2s;
+}
+
+@media only screen and (max-width: 1200px) {
+  .rest_menu-link:link,
+  .rest_menu-link:visited {
+    font-size: 1rem;
+  }
+
+  .rest_logo {
+    margin-right: 0rem;
+  }
+}
+
+.rest_menu-link:hover,
+.rest_menu-link:active {
+  color: #fcda9a;
+  transform: translateY(-3px);
+}
+
+.rest_menu-link:hover::before {
+  opacity: 1;
+}
+
+.rest_menu-dropdown {
+  visibility: hidden;
+  opacity: 1;
+  position: absolute;
+  transition: all 0.2s ease;
+  list-style: none;
+
+  margin-top: -2.3rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 8rem;
+}
+
+.rest_menu-dropdown li {
+  margin: 30px 0;
+}
+
+.rest_menu-list li:hover > a {
+  color: #fcda9a;
+}
+
+.rest_menu-list li:hover > .rest_menu-dropdown,
+.rest_menu-list li .rest_menu-dropdown :hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.rest_menu-list li .rest_menu-dropdown li a {
+  font-size: 0.9rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  width: 100%;
+  font-weight: 400;
+}
+
+.rest_menu-list li .rest_menu-dropdown li a:hover {
+  background-color: #fcda9a;
+}
+
+.rest_button-toggle {
+  background: #fcda9a;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-right: 1%;
+  height: 3rem;
+  width: 3rem;
+  align-self: center;
+  margin-right: 10%;
+}
+
+@media only screen and (min-width: 1056px) {
+  .rest_button-toggle {
+    display: none;
+  }
+}
+.rest_span-toggle {
+  color: white;
+  height: 2rem;
+  width: 2rem;
+}
+@media only screen and (max-width: 1056px) {
+  .rest_list-toggle {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1056px) {
+  .rest_list-toggle-active {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    position: absolute;
+    width: 30%;
+    transform: translateX(-10%);
+    right: 10%;
+    top: 7%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .rest_list-toggle-active {
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: flex-start;
+    width: 100%;
+    transform: translateX(0);
+    right: 0%;
+  }
+}
+
+.rest_list-toggle-active li {
+  opacity: 1;
+  font-size: 25px;
+  margin: 25px 0px;
+}
+
+.rest_list-toggle-active li:nth-child(3) {
+  margin-bottom: 0;
+}
+
+.rest_list-toggle-active a {
+  color: #fff;
+}
+
+.rest_list-toggle-active a:active,
+.rest_list-toggle-active a:hover {
+  background-color: #fcda9a;
+}
+
+.rest_toggle-dropdown {
+  list-style: none;
+  padding-left: 3.5rem;
+  margin: 0px;
+}
+
+.rest_toggle-dropdown li {
+  text-decoration: none;
 }

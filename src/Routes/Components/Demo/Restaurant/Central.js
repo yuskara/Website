@@ -7,6 +7,7 @@ import spices_left from "./imgs/spices_left.png";
 import spices_right from "./imgs/spices-right.png";
 import pic_left from "./imgs/pic_left.jpg";
 
+
 /**
  * ! Hello Guys! all the changes that i have done are here in this file.
  * ! Important: all the files in the header belongs to maria, and i did not made any changes
@@ -223,5 +224,5 @@ function Menu() {
     </div>
   );
 }
-
 export default Menu;
+

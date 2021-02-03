@@ -1,9 +1,3 @@
-*::before,
-*::after {
-  content: "";
-  position: absolute;
-}
-
 .error {
   width: 100%;
   height: auto;

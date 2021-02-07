@@ -7,20 +7,8 @@ body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-}
-
-.App {
   text-align: center;
-  background-color: rgb(255, 255, 255);
 }
 
-/* RESPONSIVENESS*/
-/* Mobile phones */
-@media screen and (max-width: 450px) {
-	.nav-gen-menu{
-    display: none;
-  }
-
-}
 
 

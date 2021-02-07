@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 html {
   scroll-behavior: smooth;
-
 }
 .res_foods_Menu {
   background-color: rgb(255, 255, 255);
@@ -31,8 +30,7 @@ html {
 .res_foods_Menu .res_foods_Menu_h3_title {
   color: rgb(84, 83, 83);
   font-weight: bolder;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 .res_foods_Menu .res_foods_Menu_h3_title:hover {
   color: rgb(84, 83, 83);
@@ -42,16 +40,14 @@ html {
   scroll-behavior: smooth;
 }
 .res_foods_Menu .gallery {
-  margin: 9px;
-  transition: transform 0.2s;
+  margin: 22px;
+  transition: transform 1.2s;
   border-bottom: 3px solid rgb(255, 0, 0);
-  box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 30px 100px -10px rgb(0 0 0 / 40%);
 }
 
 .res_foods_Menu .gallery:hover {
-  transform: scale(
-    1.1
-  ); 
+  transform: scale(1.1);
   box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.4);
 }
 
@@ -81,49 +77,21 @@ html {
   padding: 4px;
 }
 
-.responsive {
-  padding: 0 6px;
+.res_responsive {
+  /* padding: 0 6px; */
   float: left;
   width: 24.99999%;
 }
 
-.rest_menu-list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  grid-gap: 21rem;
-  z-index: 10;
-  position: relative;
-}
-
-.rest_menu-link:link,
-.rest_menu-link:visited {
-  font-size: 0.9rem;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  display: block;
-  padding: 1.5rem;
-  transition: all 0.2s;
-}
-
-.rest_menu-link:hover,
-.rest_menu-link:active {
-  color: #fcda9a;
-  transform: translateY(-3px);
-}
-
 @media only screen and (max-width: 700px) {
-  .responsive {
+  .res_responsive {
     width: 49.99999%;
     margin: 10px 6px;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .responsive {
+  .res_responsive {
     width: 100%;
   }
   .res_foods_Menu .res_foods_hr {
@@ -135,21 +103,8 @@ html {
   }
 }
 
-.card {
-  width: 45ch;
-  height: 45ch;
-  background: grey;
-  border-radius: 5px;
-  background-size: cover;
-  background-position: center center;
-  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.5s;
-  will-change: transform;
-  border: 15px solid white;
-}
-
 /* second menu of restaurant section */
-.second_menu_home_section {
+.res_div_second_menu_home_section {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   color: #777777;
   box-sizing: border-box;
@@ -161,7 +116,7 @@ html {
   vertical-align: baseline;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 59%;
+  margin-top: 6%;
 }
 .res_second_menu_center {
   width: 85%;
@@ -192,7 +147,7 @@ html {
   text-transform: uppercase;
   margin-top: 64px;
 }
-.dot {
+.res_span_dot {
   height: 17px;
   width: 17px;
   background-color: brown;
@@ -224,7 +179,7 @@ html {
   border-radius: 50vh;
 }
 
-.second_menu_home_section_container {
+.res_div_second_menu_home_section_container {
   padding: 0.5em;
   display: flex;
 }
@@ -249,7 +204,7 @@ html {
     border: 10px solid #7577b5;
     background-size: 100%;
   }
-  .second_menu_home_section {
+  .res_div_second_menu_home_section {
     margin-top: 211%;
   }
   .res_second_menu_center .second_menu_h3_title {
@@ -261,12 +216,11 @@ html {
     width: 50%;
     display: inline-block;
   }
-  .dot {
+  .res_span_dot {
     color: #a52d12;
     display: inline-table;
   }
 }
-
 
 /* restaurant central section */
 .restaurant_home_center {
@@ -326,7 +280,6 @@ html {
   font-weight: bolder;
   background-color: rgb(0, 0, 0, 0 0.4);
 }
-
 
 /* responsive for mobile display */
 @media screen and (max-device-width: 700px), screen and (max-width: 700px) {
@@ -456,7 +409,7 @@ html {
   border: none;
   transition: 0.18s ease-out;
   display: list-item;
-  width: 102%;
+  width: 86%;
   border: 1px solid rgb(0, 0, 0);
 }
 .restaurant_book_table_section .restaurant_book_table_submit button {
@@ -485,7 +438,7 @@ html {
   background-size: 100%;
   background-color: #fff;
   padding: 20px 40px;
-  margin-top: 19%;
+  margin-top: -3%;
 }
 
 .restaurant_book_table_center .restaurant_book_table_h3 {
@@ -504,8 +457,7 @@ html {
 .restaurant_book_table_section .res_input:focus {
   color: #4b515d;
   border: 1px solid #b8b6b6;
-  box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01),
-    0px 0px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
 
 .restaurant_book_table_section .restaurant_book_table_p {
@@ -580,7 +532,7 @@ html {
     display: table-cell;
     background-size: 100%;
   }
-  .second_menu_home_section {
+  .res_div_second_menu_home_section {
     margin-top: 211%;
   }
   .restaurant_book_table_center .restaurant_book_table_h3 {

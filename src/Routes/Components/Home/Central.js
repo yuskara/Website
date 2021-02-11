@@ -62,13 +62,13 @@ function Central() {
         <a href={`/store`}><div class="central-div-box">
           <img src={storePic} alt="" width="350px" height="200px" class="central-div-img"></img>
           <h3>Store Demo</h3>
-          <p>View a sample demo from an online store. this page is currently static</p>
+          <p>View a sample demo from an online store. This page is currently static</p>
         </div></a>
 
         <a href={`/restaurant`}><div class="central-div-box">
           <img src={restaurantPic} alt="" width="350px" height="200px" class="central-div-img"></img>
           <h3>Marketing</h3>
-          <p>View a sample demo from a rstairant. this page is currently static</p>
+          <p>View a sample demo from a restaurant. This page is currently static</p>
         </div></a>
 
         <div class="central-div-box">

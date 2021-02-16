@@ -1,5 +1,8 @@
 import React from 'react';
-import '../css/Central.css';
+import storePic from '../../imgs/store.png';
+import restaurantPic from '../../imgs/restaurant.png';
+import '../../css/HomeCentral.css';
+import {Link} from 'react-router-dom';
 
 
 function Central() {
@@ -8,7 +11,7 @@ function Central() {
       {/* <!-- Main page --> */}
 
       <div class="central-div-welcome-content">
-        <h1>WellCome to the StartUP Team</h1>
+        <h1>Welcome to the StartUP Team</h1>
         <hr class="central-hr-welcome"></hr>
         <p>For all your professional web designing and development</p>
       </div>
@@ -56,17 +59,17 @@ function Central() {
 
       <div class="central-div-boxes">
 
-        <div class="central-div-box">
-          <img src="https://cdn.mos.cms.futurecdn.net/jgXYNK8U4o4itGBBMRtCKa-1200-80.jpg" alt="" width="350px" height="200px" class="central-div-img"></img>
-          <h3>Analytics</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, expedita?</p>
-        </div>
+        <a href={`/store`}><div class="central-div-box">
+          <img src={storePic} alt="" width="350px" height="200px" class="central-div-img"></img>
+          <h3>Store Demo</h3>
+          <p>View a sample demo from an online store. This page is currently static</p>
+        </div></a>
 
-        <div class="central-div-box">
-          <img src="https://timesbusinessworld.com/wp-content/uploads/2019/09/Business-Marketing0.jpg" alt="" width="350px" height="200px" class="central-div-img"></img>
+        <a href={`/restaurant`}><div class="central-div-box">
+          <img src={restaurantPic} alt="" width="350px" height="200px" class="central-div-img"></img>
           <h3>Marketing</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, expedita?</p>
-        </div>
+          <p>View a sample demo from a restaurant. This page is currently static</p>
+        </div></a>
 
         <div class="central-div-box">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKfT5VH2ZnqIk34Szx0sKBwgTJef9bAYuOog&usqp=CAU" alt="" width="350px" height="200px" class="central-div-img"></img>

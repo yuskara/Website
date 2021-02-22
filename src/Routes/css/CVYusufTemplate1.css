@@ -1,22 +1,29 @@
- 
-   #CVYusufTemp1-div-menu-header {
+#cmd {
+  cursor: pointer;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 150px;
+}
+
+#CVYusufTemp-div-menu-header {
   width: 100%;
   margin: auto;
-  height: 10vh;
+  height: 12vh;
   display: flex;
   align-items: center;
-  /* position: fixed; */
   background-color: rgb(227 222 222);
   transition: 250ms linear;
   }
   
-  .CVYusufTemp1-div-menu-logo-container,
-  .CVYusufTemp1-div-menu-nav-links {
+  .CVYusufTemp-div-menu-logo-container,
+  .CVYusufTemp-div-menu-nav-links {
   display: flex;
   margin: 50px;
   }
  
-  #header-img {
+  /* #header-img {
   width: 100px;
   height: 50px;
   margin-left: -50px;
@@ -26,19 +33,18 @@
   margin: 12px 0 0 -10px;
   font-size: 25px;
   font-weight: 400;
-  ;
-  }
+  } */
   
   nav {
   flex: 2;
   }
   
-  .CVYusufTemp1-div-menu-nav-links {
+  .CVYusufTemp-div-menu-nav-links {
   justify-content: space-evenly;
   list-style: none;
   }
   
-  .CVYusufTemp1-div-menu-nav-link {
+  .CVYusufTemp-div-menu-nav-link {
   text-decoration: none;
   color: #111111;
   font-size: 20px;
@@ -102,19 +108,19 @@
   bottom: 6px;
   }
   
-  @media (max-width: 800px) {
-  
-  nav {
-  position: fixed;
-  height: 50px;
-  top: 4.3rem;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
-  }
-  
+  @media (max-width: 600px) {
+
+    #CVYusufTemp-div-nav-bar {
+      position: fixed;
+      height: 0px;
+      top: 0.3rem;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transform: translateY(100%);
+      transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+      }
+
   .hamburger {
   display: block;
   position: relative;
@@ -127,35 +133,30 @@
   .nav-open .logo-container {
   margin-top: 5px;
   }
-  
-  .nav-open .CVYusufTemp1-div-menu-nav-links {
-  margin: 1rem;
-  }
-  
-  .nav-open .CVYusufTemp1-div-menu-nav-link {
+    
+  .nav-open .CVYusufTemp-div-menu-nav-link {
   margin: 2rem;
-  }
-  
-  .nav-open header {
-  height: 20vh;
   }
   
   .nav-open .nav-toggle {
   top: 2rem;
   }
+  .CVYusufTemp-div-menu-logo-container, 
+  .CVYusufTemp-div-menu-nav-links {
+    margin: -40px;
+  }
+  .nav-open .CVYusufTemp-div-menu-nav-links {
+    display: contents;
+    }
+    nav {
+      flex: auto;
+    }
   }
  
  
  
  /* ////////////container///////////////// */
-  #cmd {
-    cursor: pointer;
-    height: 50px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 150px;
-  }
+ 
   
   #CVYusufTemp1-div-main-container {
     background-image: url(../../Routes/Components/Demo/CVTemplates/backgroundCV.jpg);
@@ -378,19 +379,4 @@
     top: 25%;
     left: 25%;
   }
-  @media (max-width: 450px) {
-
-    #CVYusufTemp1-div-main-container {
-      height: 377vh;
-    }
-
-    .CVYusufTemp1-div-contents {
-      display: contents;
-      width: 100%;
-    }
-
-    .CVYusufTemp1-div-right-section {
-      width: 70%;
-    }
-
-  }
+ 

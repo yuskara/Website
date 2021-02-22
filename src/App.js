@@ -20,7 +20,7 @@ import Error from "./Routes/Components/Error";// Notice the keyword "exact" so r
           <Route path='/templateJ1' exact component={Store} /> 
           <Route path='/templateB1' exact component={Store} /> 
           <Route path='/templateY1' exact component={TempY1} /> 
-          <Route path='/templateY1' exact component={TempY2} />
+          <Route path='/templateY2' exact component={TempY2} />
           <Route path='/templateMu1' exact component={Store} /> 
           <Route path='*' component={Error}/>
         </Switch>

@@ -108,64 +108,17 @@
   bottom: 6px;
   }
   
-  @media (max-width: 600px) {
-
-    #CVYusufTemp-div-nav-bar {
-      position: fixed;
-      height: 0px;
-      top: 0.3rem;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      transform: translateY(100%);
-      transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
-      }
-
-  .hamburger {
-  display: block;
-  position: relative;
-  }
-  
-  .nav-open nav {
-  transform: translateX(0);
-  }
-  
-  .nav-open .logo-container {
-  margin-top: 5px;
-  }
-    
-  .nav-open .CVYusufTemp-div-menu-nav-link {
-  margin: 2rem;
-  }
-  
-  .nav-open .nav-toggle {
-  top: 2rem;
-  }
-  .CVYusufTemp-div-menu-logo-container, 
-  .CVYusufTemp-div-menu-nav-links {
-    margin: -40px;
-  }
-  .nav-open .CVYusufTemp-div-menu-nav-links {
-    display: contents;
-    }
-    nav {
-      flex: auto;
-    }
-  }
- 
  
  
  /* ////////////container///////////////// */
  
-  
   #CVYusufTemp1-div-main-container {
-    background-image: url(../../Routes/Components/Demo/CVTemplates/backgroundCV.jpg);
+    background-image: url(../../Routes/Components/Demo/CVTemplates/YusufTemplate/backgroundCV.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
     height: 155vh;
-    /* width: 100vm; */
 
     display: flex;
     font-weight: 400;
@@ -379,4 +332,63 @@
     top: 25%;
     left: 25%;
   }
- 
+  @media (max-width: 600px) {
+
+    #CVYusufTemp-div-nav-bar {
+      position: fixed;
+      height: 0px;
+      top: 0.3rem;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transform: translateY(100%);
+      transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+      }
+
+  .hamburger {
+  display: block;
+  position: relative;
+  }
+  
+  .nav-open nav {
+  transform: translateX(0);
+  }
+  
+  .nav-open .logo-container {
+  margin-top: 5px;
+  }
+    
+  .nav-open .CVYusufTemp-div-menu-nav-link {
+  margin: 2rem;
+  }
+  
+  .nav-open .nav-toggle {
+  top: 2rem;
+  }
+  .CVYusufTemp-div-menu-logo-container, 
+  .CVYusufTemp-div-menu-nav-links {
+    margin: -40px;
+  }
+  .nav-open .CVYusufTemp-div-menu-nav-links {
+    display: contents;
+    }
+    nav {
+      flex: auto;
+    }
+/* ----------------page container  */
+.CVYusufTemp1-div-header .name, .CVYusufTemp1-div-header .major{
+  font-size: unset;
+}
+    .CVYusufTemp1-div-contents {
+    display: grid;
+    }
+    .CVYusufTemp1-div-page {
+    width: 100%;
+    }
+    .CVYusufTemp1-div-main-section{
+      width: 100%;
+    }
+    .CVYusufTemp1-div-right-section {
+      width: 100%;
+  }
+}

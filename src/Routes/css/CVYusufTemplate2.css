@@ -21,17 +21,14 @@
   margin: 50px;
   } */
   
-  /* .CVYusufTemp2-div-menu-logo-container {
-  flex: 1;
-  }
-  
-  #header-img {
+ 
+  /* #header-img {
   width: 100px;
   height: 50px;
   margin-left: -50px;
   }
-   */
-  /* .CVYusufTemp2-div-menu-logo {
+   
+  .CVYusufTemp2-div-menu-logo {
   margin: 12px 0 0 -10px;
   font-size: 25px;
   font-weight: 400;
@@ -109,37 +106,9 @@
   .hamburger::after {
   bottom: 6px;
   } */
-  
-  .nav-open .CVYusufTemp-div-nav-bar {
-  transform: translateX(0);
-  }
-  
-  .nav-open .logo-container {
-  margin-top: 5px;
-  }
-  
-  .nav-open .CVYusufTemp-div-menu-nav-links {
-  margin: 1rem;
-  }
-  
-  .nav-open .CVYusufTemp-div-menu-nav-link {
-  margin: 2rem;
-  }
-  
-  .nav-open header {
-  height: 20vh;
-  }
-  
-  .nav-open .nav-toggle {
-  top: 2rem;
-  }
-
  
-
  
  /* ////////////container///////////////// */
-
-
 
 .CVYusufTemp2-div-h{
     margin: 0;
@@ -264,9 +233,7 @@
   }
   
   #main h2 > i{
-    /* use absolute position to prevent icon's width from misaligning title */
-    /* assigning a fixed width here is no better due to needing to align decorator
-       line too */
+ 
     position: absolute;
     left: var(--main-blocks-title-icon-offset-left);
     z-index: 1; /* over decorator line */
@@ -533,8 +500,35 @@
     /* .hamburger {
       display: block;
       position: relative;
-      } */
+      }
       
+      .nav-open nav {
+      transform: translateX(0);
+      }
+      
+      .nav-open .logo-container {
+      margin-top: 5px;
+      }
+        
+      .nav-open .CVYusufTemp-div-menu-nav-link {
+      margin: 2rem;
+      }
+      
+      .nav-open .nav-toggle {
+      top: 2rem;
+      }
+      .CVYusufTemp-div-menu-logo-container, 
+      .CVYusufTemp-div-menu-nav-links {
+        margin: -40px;
+      }
+      .nav-open .CVYusufTemp-div-menu-nav-links {
+        display: contents;
+        }
+        nav {
+          flex: auto;
+        } */
+
+/* ----------------page container  */
     .CVYusufTemp2-div-page-container {
       height: 377vh;
       display: contents;
@@ -549,7 +543,7 @@
       width: 80%;
     }
     #sidebar{
-    width: 100%;
+    width: 94%;
     text-align: center;
     }
 

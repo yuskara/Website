@@ -1,0 +1,15 @@
+.TempYu3An-bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    /* opacity: 0.8; */
+    overflow: hidden;
+  }
+.TempYu3An-bg-video_content {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+  }

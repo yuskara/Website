@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../../css/CVMurtazaTemplate.css";
+import PdfViewer from "./PdfViewer";
 import PDF from "./amnick_cv.pdf";
 
 function MurtazaTampReview() {

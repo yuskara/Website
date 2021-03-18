@@ -6,6 +6,7 @@ import Restaurant from "./Routes/Components/Restaurant";
 import Store from "./Routes/Components/StoreOnLine";
 import TempJ1 from "./Routes/Components/TempJa1";
 import TempJ2 from "./Routes/Components/TempJa2";
+import TempJ3 from "./Routes/Components/TempJa3";
 import TempB1 from "./Routes/Components/TempBo1";
 import TempB2 from "./Routes/Components/TempBo2";
 import TempMa1 from "./Routes/Components/TempMa1";
@@ -27,6 +28,7 @@ function App() {
           <Route path='/templateMa1' exact component={TempMa1} /> 
           <Route path='/templateJ1' exact component={TempJ1} /> 
           <Route path='/templateJ2' exact component={TempJ2} /> 
+          <Route path='/templateJ3' exact component={TempJ3} /> 
           <Route path='/templateB1' exact component={TempB1} /> 
           <Route path='/templateB2' exact component={TempB2} /> 
           <Route path='/templateY1' exact component={TempY1} /> 

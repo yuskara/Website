@@ -16,6 +16,7 @@ import Error from "./Routes/Components/Error";
 
 
 function App() {
+ 
   return (
     <Router>
       <div className="App">
@@ -31,6 +32,7 @@ function App() {
           <Route path='/templateY2' exact component={TempY2} /> 
           <Route path='/templateY3' exact component={TempY3} />
           <Route path='/templateMu1' exact component={TempMu1} /> 
+ 
           <Route path='*' component={Error}/>
         </Switch>
       </div>

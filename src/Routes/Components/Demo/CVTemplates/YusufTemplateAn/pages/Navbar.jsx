@@ -1,52 +1,49 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import styled from "styled-components";
-import NavButton from "../common/NavButton";
+import "../../../../../css/CVYusufTemplate3An.css";
 
 const Wrapper = styled.div`
   .navButtons {
     display: flex;
     justify-content: space-between;
     font-size: 1.4rem;
-    margin-bottom:4px;  
+    margin-bottom:4px; 
+    color:red; 
   }
-  .btnHome{
-    margin-top:-4px;
-    color: #54ff00;
-    cursor: pointer;
-    padding: .1rem 1.5rem;
-    font-size: 1.4rem;
-  }
+  
 `;
 
 class NavBar extends Component {
   navHome = () => {
     const { history } = this.props;
-    history.push("/templateY3/");
+    history.push("/templateY3");
   };
   navAbout = () => {
     const { history } = this.props;
-    history.push("/templateY3/about");
+    history.push("/about");
   };
 
   navExperience = () => {
     const { history } = this.props;
-    history.push("templateY3/experience");
+    history.push("/experience");
   };
 
   navContact = () => {
     const { history } = this.props;
-    history.push("/templateY3/contact");
+    history.push("/contact");
   };
 
   render() {
     return (
       <Wrapper>
         <div className="navButtons">
-          <ul className="btnHome" onClick={this.navHome} >HOME</ul>
-          <NavButton onClick={this.navAbout}>About</NavButton>
-          <NavButton onClick={this.navExperience}>Experience</NavButton>
-          <NavButton onClick={this.navContact}>Contact</NavButton>
+           
+          <ul className="main-nav__link" onClick={this.navHome} >HOME</ul>
+          <ul className="main-nav__item" onClick={this.navAbout} >ABOUT</ul>
+          <ul className="main-nav__item" onClick={this.navExperience} >EXPERIENCE</ul>
+          <ul className="main-nav__item" onClick={this.navContact} >CONTACT</ul>
+      
         </div>
       </Wrapper>
     );

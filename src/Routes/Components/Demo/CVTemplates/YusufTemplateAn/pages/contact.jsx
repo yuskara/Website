@@ -6,7 +6,7 @@ import Header from "./header";
 
 const Wrapper = styled.div`
   .contact_page {
-    // opacity: 0;
+    opacity: 0;
     animation: fadeIn 1s forwards 0s;
   }
 
@@ -18,12 +18,11 @@ const Wrapper = styled.div`
   }
 
   .contact__email {
-    width: 60%;
-    padding: 3rem 5rem;
+    width: 40%;
     animation: fadeIn 1s;
     @media only screen and (max-width: 80.5em),
       screen and (max-height: 56.25em) {
-      width: 80%;
+      width: 60%;
     }
     @media only screen and (max-width: 37.5em) {
       width: 100%;
@@ -31,7 +30,7 @@ const Wrapper = styled.div`
   }
 
   .form__group:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-top: 2rem;
   }
 
   .form__input {
@@ -39,7 +38,6 @@ const Wrapper = styled.div`
     font-size: 1.5rem;
     font-family: inherit;
     color: inherit;
-    padding: 1.5rem 2rem;
     border-radius: 2px;
     background-color: transparent;
     border: none;
@@ -182,6 +180,9 @@ const Wrapper = styled.div`
     display: flex;
     animation: fadeIn 1s 0.5s;
     animation-fill-mode: backwards;
+    @media only screen and (max-width: 37.5em) {
+      flex-direction:column;
+    }
   }
 
   .btn-group {
@@ -208,8 +209,8 @@ const Wrapper = styled.div`
   }
 
   .btn-group__icon-box > svg {
-    height: 4.5rem;
-    width: 4.5rem;
+    height: 3.5rem;
+    width: 3.5rem;
     fill: rgba(232, 69, 69, 0.7);
   }
 
@@ -230,10 +231,10 @@ const Wrapper = styled.div`
     opacity: 0;
     background-color: #e84545;
     position: absolute;
-    bottom: 0%;
+    bottom: 10%;
     left: 0%;
-    width: 100%;
-    height: 100%;
+    width: 96%;
+    height: 90%;
     z-index: -1;
     transition: all 0.2s ease-out;
   }
@@ -242,6 +243,11 @@ const Wrapper = styled.div`
     font-size: large;
     text-align: center;
     margin: auto;
+  }
+  @media only screen and (max-width: 450px) {
+    .contact_social{
+      flex-direction: column;
+    }
   }
 `;
 
@@ -291,7 +297,7 @@ class contact extends Component {
                       type="email"
                       className="form__input"
                       name="subject"
-                      placeholder="Your Email"
+                      placeholder="Email"
                       id="subject"
                       required=""
                       value={this.state.email}
@@ -307,7 +313,7 @@ class contact extends Component {
                       type="text"
                       className="form__input"
                       name="subject"
-                      placeholder="Email Subject"
+                      placeholder="Subject"
                       id="subject"
                       required=""
                       value={this.state.subject}
@@ -322,7 +328,7 @@ class contact extends Component {
                     <textarea
                       className="form__input form__input--textarea"
                       name="body"
-                      placeholder="Email Body"
+                      placeholder="Body"
                       id="body"
                       required=""
                       spellCheck="false"
@@ -340,9 +346,9 @@ class contact extends Component {
               </div>
               <div className="contact__social">
                 <h3 className="phone-number">
-                  Location : Stanford Ct Northeast, Canton, OH
+                  Location : Stanford Ct Mechanicsburg, PA
                   <br />
-                  Phone : +1 (330) 299 9999‬
+                  Phone : +1 (720) 299 9999‬
                 </h3>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a
@@ -369,6 +375,21 @@ class contact extends Component {
                       <title>github</title>
                       <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-0.609 0.109-0.828-0.266-0.828-0.578 0-0.391 0.016-1.687 0.016-3.297 0-1.125-0.375-1.844-0.812-2.219 2.672-0.297 5.484-1.313 5.484-5.922 0-1.313-0.469-2.375-1.234-3.219 0.125-0.313 0.531-1.531-0.125-3.187-1-0.313-3.297 1.234-3.297 1.234-0.953-0.266-1.984-0.406-3-0.406s-2.047 0.141-3 0.406c0 0-2.297-1.547-3.297-1.234-0.656 1.656-0.25 2.875-0.125 3.187-0.766 0.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-0.344 0.313-0.656 0.844-0.766 1.609-0.688 0.313-2.438 0.844-3.484-1-0.656-1.141-1.844-1.234-1.844-1.234-1.172-0.016-0.078 0.734-0.078 0.734 0.781 0.359 1.328 1.75 1.328 1.75 0.703 2.141 4.047 1.422 4.047 1.422 0 1 0.016 1.937 0.016 2.234 0 0.313-0.219 0.688-0.828 0.578-4.766-1.594-8.203-6.094-8.203-11.391 0-6.625 5.375-12 12-12zM4.547 19.234c0.031-0.063-0.016-0.141-0.109-0.187-0.094-0.031-0.172-0.016-0.203 0.031-0.031 0.063 0.016 0.141 0.109 0.187 0.078 0.047 0.172 0.031 0.203-0.031zM5.031 19.766c0.063-0.047 0.047-0.156-0.031-0.25-0.078-0.078-0.187-0.109-0.25-0.047-0.063 0.047-0.047 0.156 0.031 0.25 0.078 0.078 0.187 0.109 0.25 0.047zM5.5 20.469c0.078-0.063 0.078-0.187 0-0.297-0.063-0.109-0.187-0.156-0.266-0.094-0.078 0.047-0.078 0.172 0 0.281s0.203 0.156 0.266 0.109zM6.156 21.125c0.063-0.063 0.031-0.203-0.063-0.297-0.109-0.109-0.25-0.125-0.313-0.047-0.078 0.063-0.047 0.203 0.063 0.297 0.109 0.109 0.25 0.125 0.313 0.047zM7.047 21.516c0.031-0.094-0.063-0.203-0.203-0.25-0.125-0.031-0.266 0.016-0.297 0.109s0.063 0.203 0.203 0.234c0.125 0.047 0.266 0 0.297-0.094zM8.031 21.594c0-0.109-0.125-0.187-0.266-0.172-0.141 0-0.25 0.078-0.25 0.172 0 0.109 0.109 0.187 0.266 0.172 0.141 0 0.25-0.078 0.25-0.172zM8.937 21.438c-0.016-0.094-0.141-0.156-0.281-0.141-0.141 0.031-0.234 0.125-0.219 0.234 0.016 0.094 0.141 0.156 0.281 0.125s0.234-0.125 0.219-0.219z"></path>
                     </svg>
+                  </div>
+                </a>
+                <a
+                  href="https://www.facebook.com"
+                  className="btn-group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="btn-group__icon-box">
+                    <svg id="icon-facebook" viewBox="0 0 24 28">
+                      <title>facebook</title>
+                      {/* <path d="M5.453 9.766v15.484h-5.156v-15.484h5.156zM5.781 4.984c0.016 1.484-1.109 2.672-2.906 2.672v0h-0.031c-1.734 0-2.844-1.188-2.844-2.672 0-1.516 1.156-2.672 2.906-2.672 1.766 0 2.859 1.156 2.875 2.672zM24 16.375v8.875h-5.141v-8.281c0-2.078-0.75-3.5-2.609-3.5-1.422 0-2.266 0.953-2.641 1.875-0.125 0.344-0.172 0.797-0.172 1.266v8.641h-5.141c0.063-14.031 0-15.484 0-15.484h5.141v2.25h-0.031c0.672-1.062 1.891-2.609 4.672-2.609 3.391 0 5.922 2.219 5.922 6.969z"></path> */}
+                     
+							<path d="M11.344,5.71c0-0.73,0.074-1.122,1.199-1.122h1.502V1.871h-2.404c-2.886,0-3.903,1.36-3.903,3.646v1.765h-1.8V10h1.8v8.128h3.601V10h2.403l0.32-2.718h-2.724L11.344,5.71z"></path>
+						</svg>
                   </div>
                 </a>
               </div>

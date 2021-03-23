@@ -59,9 +59,7 @@ const Wrapper = styled.div`
       font-weight: 100;
       letter-spacing: 1rem;
       line-height:1.5rem;
- 
-    }
-
+    }    // text-decoration: none;
   }
 `;
 

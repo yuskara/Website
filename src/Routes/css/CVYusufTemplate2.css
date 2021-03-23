@@ -139,7 +139,7 @@ li{
   hyphens: auto;
   text-align: left;
   margin-bottom: 10%;
-  display: flex;
+  display: inline-flex;
 }
 
 #main{
@@ -289,7 +289,7 @@ li{
   height: var(--decorator-outer-dim);
   border-radius: calc(var(--decorator-outer-dim) / 2);
   background-color: #fff;
-}
+}inline-block
 
 .decorator::after{
   position: absolute;
@@ -457,8 +457,11 @@ li{
 }
 
 
-@media ( max-width: 600px) {
-
+@media ( max-width: 650px) {
+  
+  #CVYusufTemp-div-menu-header {
+    height: 14vh;
+  }
   /* #CVYusufTemp-div-nav-bar {
   position: fixed;
   height: 0px;
@@ -522,3 +525,11 @@ li{
   }
 
 } 
+@media screen and (min-width:651px) and ( max-width: 750px) {
+
+  #sidebar{
+  width: 44%;
+  text-align: left;
+  padding: 0.1in;
+  }
+}

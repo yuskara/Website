@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   /* //// Curtain Down  //// */
-  /* @media only screen and (max-width: 56.25em) {
+   @media only screen and (max-width: 56.25em) {
     .button_slide {
       background-color: none;
       border: 1px none;
@@ -46,7 +46,6 @@ const Wrapper = styled.div`
           {this.props.children}
         </p>
         
-        */
   .main-nav__item {
     position: relative;
   }

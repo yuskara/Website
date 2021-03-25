@@ -41,8 +41,25 @@ const Wrapper = styled.div`
     animation-fill-mode: backwards;
   }
   .navButtons {
-    // opacity: 0;
+    opacity: 0;
     animation: fadeIn 1s forwards 0s;
+  }
+  @media only screen and (max-width: 650px) {
+    .heading-primary--main {
+ 
+      font-size: 2rem;
+      font-weight: 100;
+      line-height:2.5rem;
+      letter-spacing: .2rem;
+    
+    }
+    .heading-primary--sub {
+ 
+      font-size: 1rem;
+      font-weight: 100;
+      letter-spacing: 1rem;
+      line-height:1.5rem;
+    }    // text-decoration: none;
   }
 `;
 

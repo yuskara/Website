@@ -4,14 +4,14 @@ import Header from "./header";
 
 const Wrapper = styled.div`
   .experience_page {
-    // opacity: 0;
+    opacity: 0;
     animation: fadeIn 1s forwards 0s;
   }
   .title-center {
     width: 98%;
     text-align: left;
     margin: 0 auto;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: bold;
     padding-top: 15px;
     border-bottom: 1px solid #00000069;
@@ -20,12 +20,12 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10rem;
+    margin-top: 6rem;
   }
 
   .timeline {
-    width: 100%;
-    height: 10rem;
+    width: 90%;
+    height: 5rem;
     position: relative;
     display: block;
   }
@@ -36,7 +36,7 @@ const Wrapper = styled.div`
     position: absolute;
     top: -5.2rem;
     display: block;
-    height: 12rem;
+    height: 10rem;
     width: 1px;
     transform: none;
     z-index: 1;
@@ -86,12 +86,12 @@ const Wrapper = styled.div`
 
   .timeline__bp-header--main {
     display: block;
-    font-size: 1.7rem;
+    font-size: 1rem;
     color: #b9b9b9;
 
     @media only screen and (max-width: 80.5em),
       screen and (max-height: 56.25em) {
-      font-size: 1.2rem;
+      font-size: 1 rem;
     }
   }
 
@@ -101,25 +101,26 @@ const Wrapper = styled.div`
 
     @media only screen and (max-width: 80.5em),
       screen and (max-height: 56.25em) {
-      font-size: 1rem;
+      font-size: .8rem;
     }
   }
 
   .timeline__ribbon {
     animation: expandWidth 2s;
     position: absolute;
-    width: 100%;
+    width: 98%;
     background-image: linear-gradient(to right, transparent, #e84545 20%);
-    height: 1rem;
+    height: .6rem;
   }
 
   .timeline__dateline {
     animation: fadeIn 2.2s;
     position: absolute;
-    top: 4.5rem;
-    width: 100%;
+    top: 2.5rem;
+    width: 98%;
     background-color: #777;
-    height: 2px;
+    height: 1px;
+    color:#649853;
   }
 
   .timeline__date-mark {
@@ -167,13 +168,9 @@ const Wrapper = styled.div`
       box-sizing: border-box;
     }
   }
-
-  .u-margin-bottom-small {
-    margin-bottom: 1.5rem !important;
-  }
-
+ 
   .heading-tertiary {
-    font-size: 1.6rem;
+    font-size: 1rem;
     letter-spacing: 0.2rem;
     font-weight: 300;
     text-transform: uppercase;
@@ -182,7 +179,7 @@ const Wrapper = styled.div`
 
   .heading-tertiary--sub {
     display: block;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-transform: none;
     font-style: italic;
     font-weight: 200;
@@ -190,20 +187,22 @@ const Wrapper = styled.div`
     margin-left: 1.5rem;
   }
 
-  .paragraph {
-    font-size: 1.6rem;
+  .paragraphEx {
+    font-size: 1rem;
+  margin-bottom: 1rem;
+  color:#fcda9a;
   }
 
-  .paragraph:not(:last-child) {
-    margin-bottom: 3rem;
-  }
+  // .paragraphEx:not(:last-child) {
+  //   margin-bottom: 3rem;
+  // }
 
   a {
     color: #e84545;
   }
 
   .list {
-    font-size: 1.6rem;
+    font-size: 1rem;
     list-style: none;
   }
 
@@ -214,7 +213,6 @@ const Wrapper = styled.div`
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 40px;
   }
 
   .list li {
@@ -304,12 +302,12 @@ class experience extends Component {
                       Feb 2020 – Present, Full-time
                     </span>
                   </h3>
-                  {/* <p className="paragraph">
+                  <p className="paragraphEx">
                     Looking for a long-term and short-term job opportunites. I
                     prefer remote jobs because I left my previous job to change
                     my life. Based on the rich experience during 8 years, I will
                     deliver your promising desktop/web app and website.
-                  </p> */}
+                  </p>
                   <ul className="list">
                     <li>
                       Designed the infrastructure and architecture of projects

@@ -4,7 +4,7 @@ import Header from "./header";
 
 const Wrapper = styled.div`
   .about_page {
-    // opacity: 0;
+    opacity: 0;
     animation: fadeIn 1s forwards 0s;
   }
 
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
   }
 
   .heading-tertiary {
-    font-size: 1.6rem;
+    font-size: 1rem;
     letter-spacing: 0.2rem;
     font-weight: 300;
     text-transform: uppercase;
@@ -42,7 +42,7 @@ const Wrapper = styled.div`
   }
 
   .paragraph {
-    font-size: 1.6rem;
+    font-size: 1.2 rem;
   }
 
   p {
@@ -80,13 +80,13 @@ const Wrapper = styled.div`
     position: relative;
     cursor: pointer;
     padding-left: 1.5rem;
-    padding-top: 0.2rem;
+    // padding-top: 0.2rem;
     color: #141416;
-    margin-bottom: 1.1rem;
+    margin-bottom: .6rem;
     background-image: linear-gradient(to right, #f17a3a, #e84545);
     transition: transform 0.7s ease-out, width 0.7s ease-out;
     opacity: 0.8;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.2rem;
   }
 
   /* .progress-bar--90::before {

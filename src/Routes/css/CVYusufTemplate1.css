@@ -1,4 +1,6 @@
-#cmd {
+ 
+#CVYusufTemp-cmd {
+ 
   cursor: pointer;
   height: 30px;
   position: absolute;
@@ -10,7 +12,7 @@
 #CVYusufTemp-div-menu-header {
   width: 100%;
   margin: auto;
-  height: 12vh;
+  height: 10vh;
   display: flex;
   align-items: center;
   background-color: rgb(227 222 222);
@@ -111,7 +113,9 @@
  /* ////////////container///////////////// */
  
   #CVYusufTemp1-div-main-container {
-    background-image: url(../../Routes/Components/Demo/CVTemplates/YusufTemplate/backgroundCV.jpg);
+ 
+    background-image: url(../../Routes/Components/Demo/CVTemplates/YusufTemplate/imgs/backgroundCV.jpg);
+ 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

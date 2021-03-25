@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 import "../../../../css/CVYusufTemplate1.css";
 import Pdf from "react-to-pdf";
-import face from "./face.jpg";
+ 
+import face from "./imgs/face.jpg";
+ 
 
 const ref = React.createRef();
 
@@ -28,13 +30,11 @@ function CVYusufTemplate1 (){
             </ul>
           </nav>
    </header>
-
+     <Pdf targetRef={ref} filename="resume.pdf">
+        {({ toPdf }) => <button id="CVYusufTemp-cmd" onClick={toPdf}>Generate Pdf</button>}
+    </Pdf>
+    
     <div id="CVYusufTemp1-div-main-container">
-       <Pdf targetRef={ref} filename="resume.pdf">
-        {({ toPdf }) => <button id="cmd" onClick={toPdf}>Generate Pdf</button>}
-      </Pdf>
-     
-
     <div className="CVYusufTemp1-div-page" id="toPrint" ref={ref}>
       <header className="CVYusufTemp1-div-header">
         <div className="CVYusufTemp1-div-header-name">

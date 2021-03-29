@@ -11,14 +11,14 @@ function CVYusufTemplate1 (){
    const [toggle, setToggle] = useState(false);
     return(
     <>
-      <header className={toggle ?'nav-open':null}id="CVYusufTemp-div-menu-header">
+      <header className={toggle ?'CVYusufTemp-nav-open':null}id="CVYusufTemp-div-menu-header">
 
       {/* <div className="CVYusufTemp1-div-menu-logo-container">
         <img id="header-img" . src="logo.png" alt="logo"">
         <h4 className=" CVYusufTemp1-div-menu-logo">Logo Name</h4>
       </div> */}
 
-      <button className="nav-toggle" onClick={()=>setToggle(!toggle)} aria-label="toggle navigation">
+      <button className="CVYusufTemp-nav-toggle" onClick={()=>setToggle(!toggle)} aria-label="toggle navigation">
         <span className="hamburger"></span>
       </button>
 

@@ -16,12 +16,8 @@ import TempMu2 from "./Routes/Components/TempMu2";
 import TempY1 from "./Routes/Components/TempYu1";
 import TempY2 from "./Routes/Components/TempYu2";
 import TempY3 from "./Routes/Components/TempYu3An";
-<<<<<<< HEAD
 import Error from "./Routes/Components/Error";
 
-=======
-import Error from "./Routes/Components/Error";// Notice the keyword "exact" so react just renders the default page when nothing but the '/' is on it.
->>>>>>> dc359fb6252230fb36959ede1612113b2ca8eb36
 
 function App() {
  
@@ -41,15 +37,9 @@ function App() {
           <Route path='/templateB2' exact component={TempB2} /> 
           <Route path='/templateY1' exact component={TempY1} /> 
           <Route path='/templateY2' exact component={TempY2} /> 
-<<<<<<< HEAD
-          <Route path='/templateY3' exact component={TempY3} />
-          <Route path='/templateMu1' exact component={TempMu1} /> 
- 
-=======
           <Route path='/templateY3' exact component={TempY3} /> 
           <Route path='/templateMu1' exact component={TempMu1} /> 
           <Route path='/templateMu2' exact component={TempMu2} /> 
->>>>>>> dc359fb6252230fb36959ede1612113b2ca8eb36
           <Route path='*' component={Error}/>
         </Switch>
       </div>

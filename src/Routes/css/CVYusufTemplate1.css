@@ -113,9 +113,13 @@
  /* ////////////container///////////////// */
  
   #CVYusufTemp1-div-main-container {
+<<<<<<< HEAD
  
     background-image: url(../../Routes/Components/Demo/CVTemplates/YusufTemplate/imgs/backgroundCV.jpg);
  
+=======
+    background-image: url(../../Routes/Components/Demo/CVTemplates/YusufTemplate/CVTemplate/imgs/backgroundCV.jpg);
+>>>>>>> dc359fb6252230fb36959ede1612113b2ca8eb36
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

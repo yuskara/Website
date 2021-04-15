@@ -145,7 +145,6 @@ function Central() {
       </div>
 
       {/* <!-- Boxes div --> */}
-
       <div class='central-div-boxes'>
         <a href={`/store`}>
           <div class='central-div-box'>
@@ -195,7 +194,6 @@ function Central() {
             <p>View the demo of CV templates. This page is currently static</p>
           </div>
         </a>
-
         {/* <div class="central-div-box">
           <img src="https://www.practicalparenting.com.au/media/12522/01_03_19-pitbull-landscape.jpg" alt="" width="350px" height="200px" class="central-div-img"></img>
           <h3>Support</h3>

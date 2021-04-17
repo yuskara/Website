@@ -23,14 +23,14 @@ function CVYusufTemplate1 (){
       </button>
 
       <nav id="CVYusufTemp-div-nav-bar">
-      <ul className="CVYusufTemp-div-menu-nav-links">
-        <li><a className="CVYusufTemp-div-menu-nav-link" href="/">Home</a></li>
-        <li><a className="CVYusufTemp-div-menu-nav-link" href="/templates">Back to Template</a></li>
-        <li><Pdf targetRef={ref} filename="resume.pdf"paperSize="A4" margin="2cm">
-        {({ toPdf }) => <a className="CVYusufTemp-div-menu-nav-link" onClick={toPdf}href="#section">Download PDF</a>} 
-      </Pdf></li>
-      </ul>
-    </nav>
+        <ul className="CVYusufTemp-div-menu-nav-links">
+          <li><a className="CVYusufTemp-div-menu-nav-link" href="/">Home</a></li>
+          <li><a className="CVYusufTemp-div-menu-nav-link" href="/templates">Back to Template</a></li>
+          <li><Pdf targetRef={ref} filename="resume.pdf"paperSize="A4" margin="2cm">
+            {({ toPdf }) => <a className="CVYusufTemp-div-menu-nav-link" onClick={toPdf}href="#section">Download PDF</a>} 
+            </Pdf></li>
+        </ul>
+      </nav>
    </header>
      
     <div id="CVYusufTemp1-div-main-container">

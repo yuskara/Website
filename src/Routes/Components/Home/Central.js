@@ -6,7 +6,7 @@ import Templates from '../../imgs/templates.png';
 import '../../css/HomeCentral.css';
 import { Link } from 'react-router-dom';
 import mariaDB from '../../imgs/mariaDB.png';
-import FirstSectionCards from '../FirstSectionCards';
+import FirstSectionCards from './Central/FirstSectionCards/FirstSectionCards';
 
 function Central() {
   const tools = [

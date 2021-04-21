@@ -93,8 +93,9 @@ function Central() {
       </div>
 
       {/* <!-- Boxes div --> */}
-      <div class='central-div-boxes'>
-        <a href={`/store`}>
+      {/* <div class='central-div-boxes'> */}
+      <div class='central-boxes-container'>
+        {/*<a href={`/store`}>
           <div class='central-div-box'>
             <img
               src={storePic}
@@ -126,10 +127,27 @@ function Central() {
               static
             </p>
           </div>
-        </a>
+        </a> */}
 
-        <a href={`/templates`}>
-          <div class='central-div-box'>
+        <div class='central-div-box'>
+          <a href={`/restaurant`}>
+            <img
+              src={Templates_cv}
+              alt=''
+              width='350px'
+              height='200px'
+              class='central-div-img'
+            ></img>
+            <h3>Live Templates</h3>
+            <p>
+              View a sample demo from a restaurant. This page is currently
+              static
+            </p>
+          </a>
+        </div>
+
+        <div class='central-div-box'>
+          <a href={`/templates`}>
             <img
               src={Templates_cv}
               alt=''
@@ -140,14 +158,15 @@ function Central() {
             {/* <img src={Templates}alt="" width="350px" height="200px" class="central-div-img"></img> */}
             <h3>Resume Templates</h3>
             <p>View the demo of CV templates. This page is currently static</p>
-          </div>
-        </a>
+          </a>
+        </div>
         {/* <div class="central-div-box">
           <img src="https://www.practicalparenting.com.au/media/12522/01_03_19-pitbull-landscape.jpg" alt="" width="350px" height="200px" class="central-div-img"></img>
           <h3>Support</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, expedita?</p>
         </div> */}
       </div>
+      {/* </div> */}
 
       <hr class='central-hr-horizonal'></hr>
 

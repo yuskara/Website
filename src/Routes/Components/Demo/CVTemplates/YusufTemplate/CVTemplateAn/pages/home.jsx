@@ -80,7 +80,7 @@ class home extends Component {
   render() {
     return (
       <Wrapper>
-         <p>&nbsp;</p>
+       
          <button id="CVYusufTemp-btnBack" onClick={() => {window.location.href="/templates"}}>
            <i class="fas fa-arrow-circle-left"></i>&nbsp; Back to Templates</button>  
 

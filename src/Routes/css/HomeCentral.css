@@ -1,3 +1,8 @@
+.central_home-container {
+  width: 100%;
+  background: #eff6fc;
+}
+
 .central-cards-container {
   display: flex;
   justify-content: space-around;
@@ -21,7 +26,7 @@
 .central-div-port-text,
 .central-div-box p,
 .central-div-web-tools-text,
-.central-div-flex-columns p {
+p {
   color: #616971 !important;
 }
 
@@ -60,7 +65,7 @@
 
 /* welcome text */
 .central-div-welcome-content {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   padding-top: 1rem;
   text-align: center;
 }
@@ -130,8 +135,7 @@
 .central-div-boxes {
   margin: 1rem 0.5rem 2.5rem 0.5rem;
   padding: 1rem 2rem 2.5rem;
-  /* display: grid; */
-  /* grid-gap: 20px; */
+
   width: 60%;
 
   /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
@@ -169,36 +173,27 @@
 }
 
 /* designing and development tools */
-.central-div-columns-container {
-  display: grid;
+.central-tools-container {
+  position: relative;
   width: 100%;
-  margin-bottom: 2rem;
-  padding: 0.5rem 0 2rem 0;
-  grid-gap: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-}
-.central-div-flex-columns {
-  /* box-shadow: var(--home-central-shadow); */
-  box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
-  align-items: center;
-  text-align: center;
-  margin: 4px;
-  box-shadow: 0.1rem solid #4981b3;
-  border-radius: 15px;
-  transition: transform 0.2s ease-in;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-between;
+  margin: 4.5rem 3rem 0rem 3rem;
 }
 
-.central-div-flex-columns:last-child > img {
-  padding: 0.5rem 0.3rem 0 0.1rem;
-  /* padding-top: 0.5rem; */
+.central-tools-img {
+  position: relative;
+  width: 15vw;
+  margin: 1.5rem;
+  align-self: center;
 }
 
-.central-div-flex-columns:hover {
-  transform: translateY(-15px);
-}
+/*---- FirstSectionCard ---------*/
 
 .central-firstSectionContainer {
-  background: linear-gradient(to bottom, #eff6fc, #ffffff);
+  width: 100%;
   padding: 2rem 0 2rem 0;
 }
 
@@ -211,6 +206,8 @@
 .central-imgContainer {
   width: 60%;
 }
+
+/* ---------------------------- */
 
 .central-one-card {
   width: 30%;

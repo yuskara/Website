@@ -14,7 +14,7 @@
   }
   .temp-div-signUp-mx-4-card {
     width: 44ch;
-    height: 68ch;
+    height: 77ch;
     background: #988484;
     border-radius: 5px;
     background-size: cover;
@@ -26,7 +26,7 @@
   }
 /*form*/
 #temp-div-signUp-form{ 
-  height:700px; 
+  height:668px; 
   width:350px; 
   margin: 28px 0px 0px 70px;
   background: rgba(255,255,255,.1); 
@@ -59,7 +59,7 @@
 .temp-div-signUp-mb-4 {  
   outline: none; 
   border: none; 
-  height:38px;
+  height:36px;
   width: 86%;;
   color: rgba(20 4 4 / 70%);
   box-shadow: 0 0 5px rgba(0,0,0,.5) inset;

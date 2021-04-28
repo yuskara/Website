@@ -13,8 +13,8 @@
     background-color: darkkhaki;
   }
   .temp-div-signUp-mx-4-card {
-    width: 44ch;
-    height: 77ch;
+    width: 43ch;
+    height: 80ch;
     background: #988484;
     border-radius: 5px;
     background-size: cover;
@@ -28,7 +28,7 @@
 #temp-div-signUp-form{ 
   height:668px; 
   width:350px; 
-  margin: 28px 0px 0px 70px;
+  margin: 10px 0px 0px 10px;
   background: rgba(255,255,255,.1); 
   text-align: center;
   align-items: center;

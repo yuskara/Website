@@ -2,6 +2,7 @@ import React from 'react';
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Routes/Components/Home";
+import LogIn from "./Routes/Components/LogIn";
 import Restaurant from "./Routes/Components/Restaurant";
 import Store from "./Routes/Components/StoreOnLine";
 import Templates from "./Routes/Components/Templates";
@@ -20,13 +21,14 @@ import TempY3 from "./Routes/Components/TempYu3An";
 import SignUp from "./Routes/Components/UserSignUp";
 import Error from "./Routes/Components/Error";// Notice the keyword "exact" so react just renders the default page when nothing but the '/' is on it.
 
-// Swith Component renders the first match and ignore the rest.//   {/* Mutaza and Presefoni Part */}
+// Swith Component renders the first match and ignore the rest.// 
 function App() {
   return (
     <Router>
       <div className="App"> 
         <Switch>
-          <Route path='/' exact component={Home} />   
+          <Route path='/' exact component={Home} /> 
+          <Route path='/login' exact component={LogIn} />  
           <Route path='/restaurant' exact component={Restaurant} /> 
           <Route path='/store' exact component={Store} /> 
           <Route path='/templates' exact component={Templates} /> 

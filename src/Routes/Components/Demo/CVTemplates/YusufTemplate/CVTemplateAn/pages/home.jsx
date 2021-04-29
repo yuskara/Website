@@ -5,35 +5,22 @@ import Header from "./header";
 const Wrapper = styled.div`
   .header--centered {
     position: absolute;
-    top: 74%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  #CVYusufTemp-btnBack {
-    cursor: pointer;
-    height: 30px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 150px;
-    background-color: burlywood;
-  }
-  .CVYusufTemp-btnPDF {
+  .btnDown {
     background-color: transparent;
-    padding: .3rem 2rem;
+    padding: 1rem 3rem;
     position: relative;
-    margin-top:1%;
     text-transform: uppercase;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: #7d6569;
     font-weight: 200;
     letter-spacing: 0.2rem;
     cursor: pointer;
     border: 1px solid transparent;
     transition: all 0.2s ease-out;
-    @media only screen and (max-width: 45em) {
-      font-size: 1rem;
-    }
   }
   .btnDown:hover:enabled::before {
     height: 80%;
@@ -76,27 +63,23 @@ const Wrapper = styled.div`
 `;
 
 class home extends Component {
- 
   render() {
     return (
       <Wrapper>
-         <p>&nbsp;</p>
-         <button id="CVYusufTemp-btnBack" onClick={() => {window.location.href="/templates"}}>
-           <i class="fas fa-arrow-circle-left"></i>&nbsp; Back to Templates</button>  
-
+        <p>&nbsp; </p>
+          
         <iframe className="iframeV"
-          title="video about me"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/UwsrzCVZAb8"
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-        
-        <Header />
+        title="video about me"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/UwsrzCVZAb8"
+        frameBorder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+      <Header />
   
-        <button className="CVYusufTemp-btnPDF">Download PDF</button>        
+                    <button className="btnDown ">Download PDF</button>
                   
       </Wrapper>
     );

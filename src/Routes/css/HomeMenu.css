@@ -33,6 +33,13 @@
 
 /* MEDIA QUERIES */
 
+@media screen and (max-width: 1024px) {
+  .menu_navbar-container {
+    width: 95.4%;
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 769px) {
   .menu__navbar-burger-menu {
     display: block;
@@ -85,5 +92,11 @@
   }
   .menu__navbar-active:hover {
     border-bottom: 2px solid white;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .menu_navbar-container {
+    width: 100%;
   }
 }

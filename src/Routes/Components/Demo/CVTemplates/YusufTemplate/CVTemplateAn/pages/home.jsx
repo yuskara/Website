@@ -93,7 +93,6 @@ class home extends Component {
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
-        
         <Header />
   
         <button className="CVYusufTemp-btnPDF">Download PDF</button>        

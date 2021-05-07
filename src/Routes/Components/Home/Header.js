@@ -6,7 +6,7 @@ import '../../css/HomeHeader.css';
 
 function Header() {
   return (
-    <div className='header-container '>
+    <>
       <Particles className='header-particles' params={particlesConfig} />
 
       <div className='header-background-img'>
@@ -22,7 +22,7 @@ function Header() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

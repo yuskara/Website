@@ -28,12 +28,16 @@ const FirstSectionCards = () => {
 
   const displayCards = cardsInfo.map((el, i) => {
     return (
-      <div key={i} class='central-one-card'>
-        <div className='central-imgContainer'>
-          <img src={el.image} alt={`${el.title}`} className='central-card-image' />
+      <div key={i} class='central-services-one-card'>
+        <div className='central-services-imgContainer'>
+          <img
+            src={el.image}
+            alt={`${el.title}`}
+            className='central-services-card-image'
+          />
         </div>
-        <h4>{el.title}</h4>
-        <div className='central-cardText'>{el.description}</div>
+        <h3 className='central-services-card-title'>{el.title}</h3>
+        <div className='central-services-cardText'>{el.description}</div>
         {/* <a href='#' class='central-div-btn'>
           {el.btn}
         </a> */}
@@ -45,7 +49,7 @@ const FirstSectionCards = () => {
       <div className='central-firstSectionTitle'>
         Enjoy our services in three simple steps
       </div>
-      <div className='central-cards-container'>{displayCards}</div>
+      <div className='central-firstSection-cards-container'>{displayCards}</div>
     </div>
   );
 };

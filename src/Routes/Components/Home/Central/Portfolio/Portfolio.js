@@ -43,8 +43,8 @@ const Portfolio = () => {
     // },
   ];
 
-  const displayCards = cardInfo.map((el) => (
-    <div className='central-port-one-card'>
+  const displayCards = cardInfo.map((el, i) => (
+    <div key={i} className='central-port-one-card'>
       <div className='central-port-imgContainer'>
         <img src={el.img} alt={el.title} />
       </div>
@@ -52,7 +52,7 @@ const Portfolio = () => {
       <p>{el.text}</p>
     </div>
   ));
-  return <div class='central-port-container'>{displayCards}</div>;
+  return <div className='central-port-container'>{displayCards}</div>;
 };
 
 export default Portfolio;

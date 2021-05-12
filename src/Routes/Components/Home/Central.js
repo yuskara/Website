@@ -19,6 +19,7 @@ function Central() {
 
       {/* border */}
       <hr id='portfolio' class='central-hr-horizonal'></hr>
+
       {/* <!-- portfolio --> */}
       <div class='central-div-port'>
         <h1 class='central-div-port-head'>portfolio</h1>

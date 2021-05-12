@@ -19,11 +19,10 @@ function Central() {
 
       {/* border */}
       <hr id='portfolio' class='central-hr-horizonal'></hr>
-
       {/* <!-- portfolio --> */}
-      <div className='central-div-port'>
-        <h1 className='central-div-port-head'>portfolio</h1>
-        <p className='central-div-port-text'>
+      <div class='central-div-port'>
+        <h1 class='central-div-port-head'>portfolio</h1>
+        <p class='central-div-port-text'>
           <strong>
             Our Team of experts can help you bring your ideas in to light!
           </strong>
@@ -31,14 +30,14 @@ function Central() {
       </div>
       <Portfolio />
 
-      <hr className='central-hr-horizonal'></hr>
+      <hr class='central-hr-horizonal'></hr>
       {/* web-tools */}
       <div className='central-div-web-tools'>
-        <h3 className='central-div-web-tools-head'>
+        <h3 class='central-div-web-tools-head'>
           We built all what you need, for quality web Design and development
-          Services
+          Services?
         </h3>
-        <p className='central-div-web-tools-text'>
+        <p class='central-div-web-tools-text'>
           <strong>
             Here is some of the best web languages, framwork/libarary and
             designing we used

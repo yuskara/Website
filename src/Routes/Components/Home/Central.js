@@ -8,9 +8,9 @@ function Central() {
   return (
     <div className='central_home-container'>
       {/* <!-- Main page --> */}
-      <div className='central-div-welcome-content'>
-        <h1>Welcome to the StartUP Team</h1>
-        <hr className='central-hr-welcome'></hr>
+      <div class='central-div-welcome-content'>
+        <h1 id='services'>Welcome to the StartUP Team</h1>
+        <hr class='central-hr-welcome'></hr>
         <p>For all your professional web designing and development</p>
       </div>
 
@@ -18,7 +18,7 @@ function Central() {
       <FirstSectionCards />
 
       {/* border */}
-      <hr className='central-hr-horizonal'></hr>
+      <hr id='portfolio' class='central-hr-horizonal'></hr>
 
       {/* <!-- portfolio --> */}
       <div className='central-div-port'>

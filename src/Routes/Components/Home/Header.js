@@ -17,7 +17,7 @@ function Header() {
 
           <div className='header-button'>
             <NavLink to='/' activeClassName='header-active-title-btn'>
-              Let's go
+              Sign up
             </NavLink>
           </div>
         </div>

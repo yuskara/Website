@@ -9,7 +9,7 @@ function Central() {
     <div className='central_home-container'>
       {/* <!-- Main page --> */}
       <div class='central-div-welcome-content'>
-        <h1>Welcome to the StartUP Team</h1>
+        <h1 id="services">Welcome to the StartUP Team</h1>
         <hr class='central-hr-welcome'></hr>
         <p>For all your professional web designing and development</p>
       </div>
@@ -18,7 +18,7 @@ function Central() {
       <FirstSectionCards />
 
       {/* border */}
-      <hr class='central-hr-horizonal'></hr>
+      <hr id="portfolio" class='central-hr-horizonal'></hr>
 
       {/* <!-- portfolio --> */}
       <div class='central-div-port'>

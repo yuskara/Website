@@ -2,6 +2,7 @@
   "name": "myapp",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8080",
   "dependencies": {
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.1.4",
@@ -15,6 +16,7 @@
     "aos": "^2.3.4",
     "classlist.js": "^1.1.20150312",
     "emotion": "^11.0.0",
+    "express": "^4.17.1",
     "pg": "^8.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -25,6 +27,7 @@
     "react-parallax": "^3.1.2",
     "react-particles-js": "^3.4.1",
     "react-pdf": "^5.2.0",
+    "react-responsive": "^8.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-spring": "^8.0.27",

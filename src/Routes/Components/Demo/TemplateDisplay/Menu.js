@@ -1,10 +1,10 @@
-import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import logo_img from "../../../imgs/footer_logo.png";
-import logo_6 from "../../../imgs/new.png";
-import { LanguageContext } from "../../Home/Containers/Language";
-import { languageOptions } from "../../Home/Languages";
+import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import logo_img from '../../../imgs/footer_logo.png';
+import logo_6 from '../../../imgs/new.png';
+import { LanguageContext } from '../../Home/Containers/Language';
+import { languageOptions } from '../../Home/Languages';
 
 const Nav = styled.nav`
   min-height: 9vh;
@@ -48,7 +48,6 @@ const NavbarLinks = styled.li`
 
 const StyledLink = styled.a`
   color: #171819;
-  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
@@ -85,19 +84,19 @@ const Line = styled.span`
   transition: width 0.4s ease-in-out;
 
   :nth-child(2) {
-    width: ${({ toggle }) => (toggle ? "70%" : "40%")};
+    width: ${({ toggle }) => (toggle ? '70%' : '40%')};
   }
 `;
 
 const Overlay = styled.div`
-  height: ${({ toggle }) => (toggle ? "0" : "100vh")};
+  height: ${({ toggle }) => (toggle ? '0' : '100vh')};
   position: fixed;
   display: flex;
   width: 36vw;
   right: 0;
   top: 9vh;
   background: #fff;
-  box-shadow: ${({ toggle }) => (toggle ? "0" : "8px 0px 5px 9px grey")};
+  box-shadow: ${({ toggle }) => (toggle ? '0' : '8px 0px 5px 9px grey')};
   transition: height 0.4s linear;
 
   @media (min-width: 769px) {
@@ -111,7 +110,7 @@ const OverlayMenu = styled.ul`
   width: inherit;
   left: 50%;
   top: 45%;
-  display: ${({ toggle }) => (toggle ? "none" : "")};
+  display: ${({ toggle }) => (toggle ? 'none' : '')};
   transform: translate(-50%, -50%);
 
   li {
@@ -128,7 +127,7 @@ const OverlayMenu = styled.ul`
 
 function Menu() {
   const [toggle, setToggle] = useState(false);
-  
+
   const { userLanguage, userLanguageChange } = useContext(LanguageContext);
   const handleLanguageChange = (e) => userLanguageChange(e.target.value);
   // const onClick = e => {
@@ -139,40 +138,36 @@ function Menu() {
   return (
     <>
       <Nav>
-        <a href="/">
-          <Logo src={logo_img} alt="logo" />
+        <a href='/'>
+          <Logo src={logo_img} alt='logo' />
         </a>
-        <img
-        src={logo_6}
-        alt="eskinous logo"
-        className="menu__navbar_logo1"
-      />
+        <img src={logo_6} alt='eskinous logo' className='menu__navbar_logo1' />
         <Navbar>
           <NavbarLinks>
-            <StyledLink href="/">Home</StyledLink>
+            <StyledLink href='/'>Home</StyledLink>
           </NavbarLinks>
           <NavbarLinks>
-            <StyledLink href="#FirstServicesId">Services</StyledLink>
+            <StyledLink href='#FirstServicesId'>Services</StyledLink>
           </NavbarLinks>
           <NavbarLinks>
-            <StyledLink href="#PortfolioId">Portfolio</StyledLink>
+            <StyledLink href='#PortfolioId'>Portfolio</StyledLink>
           </NavbarLinks>
           <NavbarLinks>
-            <StyledLink href="#TemplatesFooterId">About us</StyledLink>
+            <StyledLink href='#TemplatesFooterId'>About us</StyledLink>
           </NavbarLinks>
-          <div className="dropdown_flag">
-          <select
-            className="dropdown-content_flag"
-            onChange={handleLanguageChange}
-            value={userLanguage}
-          >
-            {Object.entries(languageOptions).map(([id, name]) => (
-              <option key={id} value={id}>
-                {name}
-              </option>
-            ))}
-          </select>
-        </div>
+          <div className='dropdown_flag'>
+            <select
+              className='dropdown-content_flag'
+              onChange={handleLanguageChange}
+              value={userLanguage}
+            >
+              {Object.entries(languageOptions).map(([id, name]) => (
+                <option key={id} value={id}>
+                  {name}
+                </option>
+              ))}
+            </select>
+          </div>
         </Navbar>
         <NavIcon onClick={() => setToggle(!toggle)}>
           <Line toggle={!toggle} />
@@ -183,16 +178,16 @@ function Menu() {
       <Overlay toggle={!toggle}>
         <OverlayMenu toggle={!toggle}>
           <NavbarLinks>
-            <StyledLink to="/">Home</StyledLink>
+            <StyledLink to='/'>Home</StyledLink>
           </NavbarLinks>
           <NavbarLinks>
-            <StyledLink to="">About us</StyledLink>
+            <StyledLink to=''>About us</StyledLink>
           </NavbarLinks>
           <NavbarLinks>
-            <StyledLink to="">Services</StyledLink>
+            <StyledLink to=''>Services</StyledLink>
           </NavbarLinks>
           <NavbarLinks>
-            <StyledLink to="/restaurant">Our Work</StyledLink>
+            <StyledLink to='/restaurant'>Our Work</StyledLink>
           </NavbarLinks>
         </OverlayMenu>
       </Overlay>
@@ -200,4 +195,3 @@ function Menu() {
   );
 }
 export default Menu;
-

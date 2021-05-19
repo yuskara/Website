@@ -11,6 +11,7 @@ p {
   color: #616971 !important;
 }
 
+/*---------- welcome text ----------*/
 .central-hr-welcome {
   width: 30%;
   background-color: #68a0d2;
@@ -20,7 +21,6 @@ p {
   transform: scale(1.5);
 }
 
-/*---------- welcome text ----------*/
 .central-div-welcome-content {
   width: 100%;
   padding-top: 1rem;
@@ -31,6 +31,35 @@ p {
 }
 .central-div-welcome-content p {
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 425px) {
+  .central-div-welcome-content > h1 {
+    font-size: 1.5rem;
+  }
+  .central-div-welcome-content > p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .central-div-welcome-content > h1 {
+    font-size: 1.2rem;
+  }
+  .central-div-welcome-content > p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .central-div-welcome-content > h1 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: 0.05rem;
+  }
+  .central-div-welcome-content > p {
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+  }
 }
 
 /*---------- border ------------*/
@@ -45,6 +74,8 @@ p {
 
 .central-firstSection-cards-container {
   display: flex;
+  justify-content: center;
+  margin-top: 3rem;
 }
 
 .central-firstSectionContainer {
@@ -66,7 +97,6 @@ p {
 
 .central-services-card-image {
   width: 90%;
-
   height: 25vh;
   max-height: 25vh;
 }
@@ -89,6 +119,14 @@ p {
 }
 
 @media screen and (max-width: 425px) {
+  .central-firstSection-cards-container {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  .central-services-one-card:first-child .central-services-imgContainer > img {
+    margin-right: 1.3rem;
+  }
+
   .central-firstSectionTitle {
     margin-bottom: 3rem;
   }
@@ -112,10 +150,36 @@ p {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .central-firstSectionTitle {
+    font-size: 1.6rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .central-firstSectionTitle {
+    font-size: 1.6rem;
+    letter-spacing: 0.055rem;
+    line-height: 2rem;
+  }
+
+  .central-services-card-title {
+    font-size: 1.4rem;
+  }
+
+  .central-services-cardText {
+    margin: 0;
+    width: 100%;
+  }
+}
+
 /*--------- Portfolio ----------- */
 .central-port-container {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-bottom: 4rem;
 }
 
@@ -124,6 +188,11 @@ p {
   margin: 1rem 0;
   padding: 2rem 0 0;
 }
+
+.central-port-active-link {
+  color: black;
+}
+
 .central-div-port-head {
   text-transform: uppercase;
   font-size: 2rem;
@@ -137,7 +206,7 @@ p {
   background: #c8e2f7;
   box-shadow: 4px 4px 3px #a9d2f2;
   border-radius: 10px;
-  margin: 0.5rem;
+  margin: 1.5rem;
   padding: 1rem 0.5rem 0.5rem 0.5rem;
   display: flex;
   flex-flow: column nowrap;
@@ -146,14 +215,14 @@ p {
 }
 
 .central-port-imgContainer {
-  width: 70%;
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .central-port-imgContainer > img {
   width: 100%;
-  height: 20vh;
+  height: 30vh;
   border-radius: 10px;
 }
 
@@ -174,8 +243,23 @@ p {
 }
 
 @media screen and (max-width: 425px) {
+  .central-div-port-head {
+    letter-spacing: 0.08rem;
+  }
+
+  .central-div-port-text {
+    font-size: 1.1rem;
+    letter-spacing: 0.04rem;
+    line-height: 1.7rem;
+  }
+
+  .central-port-container {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
   .central-port-one-card {
-    width: 35%;
+    width: 50%;
   }
   .central-port-one-card > h2 {
     font-size: 1.3rem;
@@ -186,6 +270,10 @@ p {
 }
 
 @media screen and (max-width: 320px) {
+  .central-div-port-head {
+    letter-spacing: 0.065rem;
+  }
+
   .central-port-one-card > h2 {
     font-size: 1.1rem;
   }
@@ -227,22 +315,44 @@ p {
   align-self: center;
 }
 
-/* @media queries 768 & 500 */
+.central-tools-img:last-child {
+  margin-top: 0.1rem;
+}
 
-@media (max-width: 768px) {
-  .central-div-welcome-content h1,
-  .central-div-port-head {
-    font-size: 1.5rem;
+@media screen and (max-width: 375px) {
+  .central-div-web-tools-head {
+    letter-spacing: 0.07rem;
+    font-size: 1.3rem;
+    line-height: 1.85rem;
+  }
+
+  .central-div-web-tools-text {
+    font-size: 1.2rem;
+    letter-spacing: 0.045rem;
+  }
+
+  .central-tools-img {
+    margin-left: 1.3rem;
+  }
+
+  .central-tools-img > img {
+    width: 120%;
   }
 }
 
-@media (max-width: 500px) {
-  .central-div-welcome-content h1,
-  .central-div-port-head {
-    font-size: 1.2rem;
+@media screen and (max-width: 320px) {
+  .central-div-web-tools-head {
+    letter-spacing: 0.05rem;
   }
 
-  .central-div-btn {
-    display: block;
+  .central-div-web-tools-text {
+    font-size: 1.1rem;
+  }
+
+  .central-tools-img > img {
+    width: 150%;
+  }
+  .central-tools-img:last-child {
+    margin-top: 0.55rem;
   }
 }

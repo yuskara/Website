@@ -7,7 +7,7 @@ import checkPay from '../../../../imgs/check-pay.svg';
 const FirstSectionCards = () => {
   const cardsInfo = [
     {
-      title: 'Log in / Sign up',
+      title: 'Sign in / Sign up',
       description: `Create an account if you don't already have one. It takes only one minute.`,
       btn: 'Our Inovation',
       image: `${login}`,
@@ -28,7 +28,7 @@ const FirstSectionCards = () => {
 
   const displayCards = cardsInfo.map((el, i) => {
     return (
-      <div key={i} class='central-services-one-card'>
+      <div key={i} className='central-services-one-card'>
         <div className='central-services-imgContainer'>
           <img
             src={el.image}
@@ -37,7 +37,7 @@ const FirstSectionCards = () => {
           />
         </div>
         <h3 className='central-services-card-title'>{el.title}</h3>
-        <div className='central-services-cardText'>{el.description}</div>
+        <p className='central-services-cardText'>{el.description}</p>
         {/* <a href='#' class='central-div-btn'>
           {el.btn}
         </a> */}
@@ -46,9 +46,9 @@ const FirstSectionCards = () => {
   });
   return (
     <div className='central-firstSectionContainer'>
-      <div className='central-firstSectionTitle'>
+      <h3 className='central-firstSectionTitle'>
         Enjoy our services in three simple steps
-      </div>
+      </h3>
       <div className='central-firstSection-cards-container'>{displayCards}</div>
     </div>
   );

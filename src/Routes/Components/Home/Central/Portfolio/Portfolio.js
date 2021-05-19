@@ -2,6 +2,7 @@ import React from 'react';
 import '../../../../css/HomeCentral.css';
 import Templates_cv from '../../../../imgs/templates_cv.jpg';
 import Templates_cv2 from '../../../../imgs/templates_cv2.jpg';
+import all_cvs from '../../../../imgs/all-cvs.png';
 // import storePic from '../../../../imgs/store.png';
 // import restaurantPic from '../../../../imgs/restaurant.png';
 
@@ -20,13 +21,12 @@ const Portfolio = () => {
     //     'View a sample demo from an online store. This page is currently static',
     //   link: '/store',
     // },
-    // {
-    //   img: `${restaurantPic}`,
-    //   title: 'Marketing',
-    //   text:
-    //     'View a sample demo from a restaurant. This page is currently static',
-    //   link: '/restaurant',
-    // },
+    {
+      img: `${all_cvs}`,
+      title: 'Templates',
+      text: 'Check all available templates and live sites.',
+      link: '/templates',
+    },
     {
       img: `${Templates_cv}`,
       title: 'Resume Templates',

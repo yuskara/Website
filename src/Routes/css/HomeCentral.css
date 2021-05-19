@@ -224,6 +224,7 @@ p {
   width: 100%;
   height: 30vh;
   border-radius: 10px;
+  background: white;
 }
 
 .central-port-imgContainer:hover {

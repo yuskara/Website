@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "../../css/HomeMenu.css";
 import logo_img from "../../imgs/footer_logo.png";
@@ -6,7 +6,6 @@ import logo_6 from "../../imgs/new.png";
 import logos_6 from "../../imgs/logo_6.png";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
-//import { LanguageContext } from "./Languages";
 import i18next from "i18next";
 import cookies from "js-cookie";
 import classNames from "classnames";
@@ -81,7 +80,6 @@ const NavIcon = styled.button`
   border: none;
   outline: none;
   margin-right: 1%;
-
   @media (min-width: 769px) {
     display: none;
   }
@@ -141,12 +139,10 @@ const OverlayMenu = styled.ul`
 const languages = [
   {
     code: "gr",
-    name: "GR",
     country_code: "gr",
   },
   {
     code: "en",
-    name: "EN",
     country_code: "gb",
   },
 ];
@@ -158,7 +154,6 @@ function Menu() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    console.log("Setting page stuff");
     document.body.dir = currentLanguage.dir || "ltr";
     document.title = t("app_title");
   }, [currentLanguage, t]);
@@ -167,7 +162,6 @@ function Menu() {
     setToggle((prev) => !prev);
   };
 
-  console.log(toggle);
   const navBarOpts = [
     {
       name: "Home",
@@ -187,8 +181,7 @@ function Menu() {
     },
   ];
 
-  //const { userLanguage, userLanguageChange } = useContext(LanguageContext);
-  //const handleLanguageChange = (e) => userLanguageChange(e.target.value);
+
   const mapNavOpts = navBarOpts.map((el) => (
     <div key={el.name} onClick={() => setToggle(false)}>
       <NavLink to={el.link} className="menu__navbar-active">
@@ -225,7 +218,7 @@ function Menu() {
                   className="dropdown-menu"
                   aria-labelledby="dropdownMenuButton"
                 >
-                  {languages.map(({ code, name, country_code }) => (
+                  {languages.map(({ code, country_code }) => (
                     <li key={country_code}>
                       <a
                         href="#"
@@ -242,7 +235,6 @@ function Menu() {
                             opacity: currentLanguageCode === code ? 0.7 : 1,
                           }}
                         ></span>
-                        {name}
                       </a>
                     </li>
                   ))}

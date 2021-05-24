@@ -5,7 +5,7 @@ import { deviceSize } from './Assets/responsive';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import Team1 from './img/team1.jpg';
+import Team1 from './imgs/team1.jpg';
 
 const AboutCenterContainer = styled.div`
     width: 85%;

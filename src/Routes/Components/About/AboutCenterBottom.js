@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { deviceSize } from './Assets/responsive';
 
-import Background from './img/background.jpg'
-import Video6Nous from './img/w-d.mp4'
+import Background from './imgs/background.jpg'
+import Video6Nous from './imgs/w-d.mp4'
 
 const ACBottomSection = styled.div`
     display: grid;

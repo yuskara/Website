@@ -6,7 +6,7 @@ import { deviceSize } from "./Assets/responsive";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import InGreece from "./img/greece.png";
+import InGreece from "./imgs/greece.png";
 
 const TopSectionContent = styled.div`
   width: 85%;

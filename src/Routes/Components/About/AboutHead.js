@@ -2,43 +2,43 @@ import React from "react";
 import styled from "styled-components";
 import { deviceSize } from "./Assets/responsive";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const HeadContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 80vh;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+  justify-content: center;
+  margin: 4rem 3rem 1rem;
+  padding: 1rem 0;
 `;
 
 const HeadContent = styled.div`
-  padding: 3vh 6vw;
-  margin-right: auto;
-  margin-left: auto;
-
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    margin-right: 2rem;
-    margin-left: 1rem;
-  }
-`;
-
-const HeadRow = styled.div`
-  width: 75%;
-  text-align: start;
-  padding: 4rem 1rem 1rem;
+  width: 60%;
   color: #000639;
-  background-color: #cccccc3f;
+  background-color: #fff;
+  padding: 2rem;
+  margin-top: 2rem;
 
+  @media screen and (max-width: ${deviceSize.tablet}px) {
+    width: 90%;
+  }
   @media screen and (max-width: ${deviceSize.mobile}px) {
+    margin: 2rem;
     width: 100%;
   }
 `;
-
 const HeadHeading = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: 600;
-  letter-spacing: .05px;
+  letter-spacing: .06px;
   line-height: 110%;
-  margin-bottom: 45px;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const HeadingSpan = styled.span`
@@ -46,7 +46,8 @@ const HeadingSpan = styled.span`
 `;
 
 const HeadText = styled.p`
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  color: #000639!important;
   line-height: 32px;
   margin-bottom: 25px;
 `;
@@ -59,14 +60,18 @@ const Line = styled.span`
 `;
 
 function AboutHead () {
+
+  AOS.init({
+    offset: 300,
+    duration: 1000
+  })
+
   return(
-    <HeadContainer>
-      <HeadContent>
-        <HeadRow>
-          <Line />
-          <HeadHeading>Hello! from <HeadingSpan>Eksi</HeadingSpan>-Nous.</HeadHeading>
-          <HeadText>We work with individual, companies & founders to build scalable, results-driven software teams in Greece. Focus on your business while we focus on making the world reach out to you and building your team.</HeadText>
-        </HeadRow>
+    <HeadContainer >
+      <HeadContent data-aos="fade-down">
+        <Line />
+        <HeadHeading>Hello! from <HeadingSpan>Eksi</HeadingSpan>-Nous.</HeadHeading>
+        <HeadText>We work with individual, companies & founders to build scalable, results-driven software teams in Greece. Focus on your business while we focus on making the world reach out to you and building your team.</HeadText>
       </HeadContent>
     </HeadContainer>
   )

@@ -1,20 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
 import { deviceSize } from './Assets/responsive';
-import Team1 from './imgs/team1.jpg';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+import Team1 from './img/team1.jpg';
 
 const AboutCenterContainer = styled.div`
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 1rem;
     position: relative;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    left: 12.5%;
+
+    @media screen and (max-width: ${deviceSize.tablet}px) {
+        width: 95%;
+        left: 0;
+    }
 `;
 
-const AboutCenterContent = styled.div`
+const AboutCenterContent = styled.div`width: 100%;
     display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
     background-color: #fff;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -26,7 +36,7 @@ const AboutCenterContent = styled.div`
 `;
 
 const AboutCenterInner = styled.div`
-    width: 68%;
+    width: 60%;
     padding: 4rem 1rem;
     transition: transform 0.2s ease-in;
 
@@ -51,30 +61,32 @@ const AboutCenterInner = styled.div`
 `;
 
 const TopSectionCard = styled.div`
-    width: 37%;
+    width: 40%;
     background-color: #cccccc3f;
     margin: 15px;
 
     @media screen and (max-width: ${deviceSize.tablet}px) {
-        width: 100%;
+        width: 95%;
     }
 `;
 
 const TopSectionInnerCard = styled.div`
-    color: #000639;
     text-align: start;
-    margin: 1rem;
+    margin: .5rem;
     padding: .5rem;
 `;
 
 const TopSectionInnerCardHead = styled.h2`
     font-weight: 500;
-    font-size: 35px;
+    font-size: 30px;
+    color: #000639;
     text-transform: uppercase;
     line-height: 1.2;
+    margin: 10px 0;
 `;
 const TopSectionInnerCardText = styled.p`
     font-size: 16px;
+    color: #000639!important;
 `;
 
 const Line = styled.span`
@@ -85,8 +97,14 @@ const Line = styled.span`
 `;
 
 function AboutCenter () {
+
+    AOS.init({
+        offset: 300,
+        duration: 2000
+    })
+    
     return(
-        <AboutCenterContainer>
+        <AboutCenterContainer data-aos="fade-left">
             <AboutCenterContent>
                 <AboutCenterInner>
                     <img src={Team1} alt="best in the field" />

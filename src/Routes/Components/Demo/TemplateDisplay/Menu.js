@@ -31,14 +31,17 @@ const Navbar = styled.ul`
   list-style: none;
   display: flex;
   width: inherit;
-  justify-content: center;
-
+  margin-right:10%;
   li:nth-child(2) {
     margin: 0px 20px;
   }
 
   @media (max-width: 768px) {
     display: none;
+  }
+  @media (min-width: 1024px) {
+    margin-left: 0%;
+    justify-content: center;
   }
 `;
 
@@ -47,8 +50,8 @@ const NavbarLinks = styled.li`
 `;
 
 const StyledLink = styled.a`
-  color: #171819;
-  font-size: 16px;
+  color: #4c78a5;
+  font-size: 22px;
   font-weight: 700;
   text-decoration: none;
   background-image: linear-gradient(rgb(211, 199, 199), rgb(211, 199, 199));

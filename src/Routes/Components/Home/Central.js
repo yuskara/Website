@@ -12,9 +12,8 @@ import Portfolio from './Central/Portfolio/Portfolio';
 
 function Central() {
   return (
-    <div  id="portfolio_more" className="central_home-container">
+    <div id="portfolio_more" className='central_home-container'>
       {/* <!-- Main page --> */}
-
       <div  class="central-div-welcome-content">
       <div class='central-div-welcome-content'>
         <h1 id="services">Welcome to the StartUP Team</h1>
@@ -26,9 +25,9 @@ function Central() {
       <FirstSectionCards />
 
       {/* border */}
-
       <div class="central-div-port">
       <hr id="portfolio" class='central-hr-horizonal'></hr>
+
       {/* <!-- portfolio --> */}
       <div class='central-div-port'>
         <h1 class='central-div-port-head'>portfolio</h1>
@@ -121,14 +120,13 @@ function Central() {
       <Portfolio />
 
       <hr class='central-hr-horizonal'></hr>
-
       {/* web-tools */}
-      <div id="learnAboutUs" className="central-div-web-tools">
-        <h3 class="central-div-web-tools-head">
+      <div id="learnAboutUs" className='central-div-web-tools'>
+        <h3 class='central-div-web-tools-head'>
           We built all what you need, for quality web Design and development
           Services?
         </h3>
-        <p class="central-div-web-tools-text">
+        <p class='central-div-web-tools-text'>
           <strong>
             Here is some of the best web languages, framwork/libarary and
             designing we used

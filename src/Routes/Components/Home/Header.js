@@ -12,7 +12,7 @@ function Header() {
       <div className='header-background-img'>
         <div className='header-title'>
           <div className='header-text'>
-            Let's get started together in the world of buisness.
+            Let's get started together in the world of business.
           </div>
 
           <div className='header-button'>

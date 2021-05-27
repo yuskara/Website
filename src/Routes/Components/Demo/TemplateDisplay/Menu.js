@@ -1,8 +1,10 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import logo_img from "../../../imgs/footer_logo.png";
-import logo_6 from "../../../imgs/new.png";
+import React, { useState, useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import logo_img from '../../../imgs/footer_logo.png';
+import logo_6 from '../../../imgs/new.png';
+import { LanguageContext } from '../../Home/Containers/Language';
+import { languageOptions } from '../../Home/Languages';
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import cookies from "js-cookie";
@@ -129,6 +131,9 @@ const OverlayMenu = styled.ul`
 
 function Menu() {
   const [toggle, setToggle] = useState(false);
+
+  const { userLanguage, userLanguageChange } = useContext(LanguageContext);
+  const handleLanguageChange = (e) => userLanguageChange(e.target.value);
   // const onClick = e => {
   //   e.preventDefault();
   //   setToggle(!false);
@@ -171,7 +176,6 @@ function Menu() {
             <StyledLink href='/'>Home</StyledLink>
           </NavbarLinks>
           <NavbarLinks>
-
           <StyledLink href="/signUp">Sign-Up</StyledLink>
           </NavbarLinks>
           <NavbarLinks>
@@ -179,8 +183,7 @@ function Menu() {
             <StyledLink href="#FirstServicesId">Services</StyledLink>
           </NavbarLinks>
           <NavbarLinks>
-            <StyledLink href="#PortfolioId">Portfolio</StyledLink>
-
+            <StyledLink href='#PortfolioId'>Portfolio</StyledLink>
           </NavbarLinks>
           <NavbarLinks>
             <StyledLink href='#TemplatesFooterId'>About us</StyledLink>
@@ -224,21 +227,20 @@ function Menu() {
           <Line toggle={!toggle} />
         </NavIcon>
       </Nav>
-      <Overlay toggle={!toggle}>
+        <Overlay toggle={!toggle}>
         <OverlayMenu toggle={!toggle}>
-
         <NavbarLinks>
-        <StyledLink href="/">Home</StyledLink>
-      </NavbarLinks>
-      <NavbarLinks>
-      <StyledLink href="/signUp">Sign-Up</StyledLink>
-      </NavbarLinks>
-      <NavbarLinks>
-        <StyledLink href="/login">Sign-In</StyledLink>
-      </NavbarLinks>
-      <NavbarLinks>
-        <StyledLink href="#TemplatesFooterId">About us</StyledLink>
-      </NavbarLinks>
+          <StyledLink href="/">Home</StyledLink>
+        </NavbarLinks>
+        <NavbarLinks>
+          <StyledLink href="/signUp">Sign-Up</StyledLink>
+        </NavbarLinks>
+        <NavbarLinks>
+          <StyledLink href="/login">Sign-In</StyledLink>
+        </NavbarLinks>
+        <NavbarLinks>
+          <StyledLink href="#TemplatesFooterId">About us</StyledLink>
+        </NavbarLinks>
           <NavbarLinks>
             <StyledLink to='/'>Home</StyledLink>
           </NavbarLinks>

@@ -1,10 +1,14 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import logo_img from '../../../imgs/footer_logo.png';
 import logo_6 from '../../../imgs/new.png';
 import { LanguageContext } from '../../Home/Containers/Language';
 import { languageOptions } from '../../Home/Languages';
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
+import cookies from "js-cookie";
+import classNames from "classnames";
 
 const Nav = styled.nav`
   min-height: 9vh;
@@ -135,6 +139,31 @@ function Menu() {
   //   setToggle(!false);
   // };
 
+/*=====================+
+ |LANGUAGES TRANSLATION|
+ +=====================*/
+ const languages = [
+  {
+    code: "gr",
+    name: "GR",
+    country_code: "gr",
+  },
+  {
+    code: "en",
+    name: "EN",
+    country_code: "gb",
+  },
+];
+
+  const currentLanguageCode = cookies.get("i18next") || "en";
+  const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    document.body.dir = currentLanguage.dir || "ltr";
+    document.title = t("app_title");
+  }, [currentLanguage, t]);
+
   return (
     <>
       <Nav>
@@ -147,7 +176,11 @@ function Menu() {
             <StyledLink href='/'>Home</StyledLink>
           </NavbarLinks>
           <NavbarLinks>
-            <StyledLink href='#FirstServicesId'>Services</StyledLink>
+          <StyledLink href="/signUp">Sign-Up</StyledLink>
+          </NavbarLinks>
+          <NavbarLinks>
+            <StyledLink href="/login">Sign-In</StyledLink>
+            <StyledLink href="#FirstServicesId">Services</StyledLink>
           </NavbarLinks>
           <NavbarLinks>
             <StyledLink href='#PortfolioId'>Portfolio</StyledLink>
@@ -155,18 +188,37 @@ function Menu() {
           <NavbarLinks>
             <StyledLink href='#TemplatesFooterId'>About us</StyledLink>
           </NavbarLinks>
-          <div className='dropdown_flag'>
-            <select
-              className='dropdown-content_flag'
-              onChange={handleLanguageChange}
-              value={userLanguage}
-            >
-              {Object.entries(languageOptions).map(([id, name]) => (
-                <option key={id} value={id}>
-                  {name}
-                </option>
-              ))}
-            </select>
+          <div className="language-select">
+            <div className="">
+              <div className="dropdown">
+                <ul
+                  className="dropdown-menu"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  {languages.map(({ code, name, country_code }) => (
+                    <li key={country_code}>
+                      <a
+                        href="#"
+                        className={classNames("dropdown-item", {
+                          disabled: currentLanguageCode === code,
+                        })}
+                        onClick={() => {
+                          i18next.changeLanguage(code);
+                        }}
+                      >
+                        <span
+                          className={`flag-icon flag-icon-${country_code} mx-2`}
+                          style={{
+                            opacity: currentLanguageCode === code ? 0.7 : 1,
+                          }}
+                        ></span>
+                        {name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </Navbar>
         <NavIcon onClick={() => setToggle(!toggle)}>
@@ -175,8 +227,20 @@ function Menu() {
           <Line toggle={!toggle} />
         </NavIcon>
       </Nav>
-      <Overlay toggle={!toggle}>
+        <Overlay toggle={!toggle}>
         <OverlayMenu toggle={!toggle}>
+        <NavbarLinks>
+          <StyledLink href="/">Home</StyledLink>
+        </NavbarLinks>
+        <NavbarLinks>
+          <StyledLink href="/signUp">Sign-Up</StyledLink>
+        </NavbarLinks>
+        <NavbarLinks>
+          <StyledLink href="/login">Sign-In</StyledLink>
+        </NavbarLinks>
+        <NavbarLinks>
+          <StyledLink href="#TemplatesFooterId">About us</StyledLink>
+        </NavbarLinks>
           <NavbarLinks>
             <StyledLink to='/'>Home</StyledLink>
           </NavbarLinks>

@@ -2,7 +2,7 @@ require('dotenv').config();
 
 module.exports = {
   development: {
-    client: 'pg',
+    client: 'mysql',
     connection: {
       host: process.env.DB_HOST,
       user: process.env.DB_USER,
@@ -10,13 +10,13 @@ module.exports = {
       database: process.env.DB_NAME,
     },
     migrations: {
-      directory: './private/DB/migrations',
+      directory: './DB/migrations',
     },
     seeds: {
-      directory: './private/DB/seeds/dev',
+      directory: './DB/seeds/dev',
     },
   production: {
-      client: 'pg',
+      client: 'mysql',
       connection: {
         host: process.env.DB_HOST,
         user: process.env.DB_USER,
@@ -24,10 +24,10 @@ module.exports = {
         database: process.env.DB_NAME,
       },
       migrations: {
-        directory: './private/DB/migrations',
+        directory: './DB/migrations',
       },
       seeds: {
-        directory: './private/DB/seeds/dev',
+        directory: './DB/seeds/dev',
       },
     },
       useNullAsDefault: true,

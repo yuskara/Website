@@ -23,7 +23,6 @@
     "i18next-browser-languagedetector": "^6.1.1",
     "i18next-http-backend": "^1.2.4",
     "js-cookie": "^2.2.1",
-    "knex": "^0.95.6",
     "mysql": "^2.18.1",
     "pg": "^8.6.0",
     "react": "^16.13.1",

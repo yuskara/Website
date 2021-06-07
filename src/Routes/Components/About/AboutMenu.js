@@ -49,7 +49,7 @@ const AboutNavLogo = styled(Link)`
     }
 `;
 
-const MobileIcon = styled.div`
+const AboutMobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: ${deviceSize.tablet}px) {
@@ -64,12 +64,12 @@ const MobileIcon = styled.div`
   }
 `;
 
-const FaBarsToggle = styled(FaBars)`
+const AboutFaBarsToggle = styled(FaBars)`
   color: #fff;
   cursor: pointer;
 `;
 
-const AboutNavMenu = styled.ul`
+const AboutNavMenu = styled.div`
   display: flex;
   align-items: center;
   text-align: center;
@@ -84,16 +84,25 @@ const AboutNavItem = styled.div`
   display: flex;
 `;
 
-const AboutNavLinks = styled.li`
+// const AboutNavLinks = styled(Link)`
+const AboutNavLinks = styled.a`
   color: #fff;
   font-size: 1rem;
   text-decoration: none;
   height: 100%;
-  padding: 0 1rem;
+  margin: 0 1rem;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 
   &.active {
     border-bottom: 3px solid #2a9d8f;
+  }
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    color: #2a9d8f;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 2px;
   }
 `;
 
@@ -107,21 +116,18 @@ const AboutNavBtn = styled.div`
   }
 `;
 
-const AboutBtnLink = styled(Link)`
-  font-size: 1rem;
-  color: #fff;
-  font-weight: 500;
-  background: #2a9d8f;
-  white-space: nowrap;
-  text-decoration: none;
-  padding: 7px 14px;
-  border-radius: 20px;
-  border: none;
-  outline: none;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-
-  &:hover {
+// const AboutBtnLink =styled(Link)`
+const AboutBtnLink = styled.a`
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+    background: #2a9d8f;;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 7px 14px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
     transition: all 0.2s ease-in-out;
     color: #333;
     background: #fff;
@@ -138,21 +144,31 @@ function AboutMenu({ aboutToggle }) {
             {/* Eksi-Nous */}
             <img src={EksiNousLogo} />
           </AboutNavLogo>
-          <MobileIcon onClick={aboutToggle}>
-            <FaBarsToggle />
-          </MobileIcon>
+          <AboutMobileIcon onClick={aboutToggle}>
+            <AboutFaBarsToggle />
+          </AboutMobileIcon>
           <AboutNavMenu>
             <AboutNavItem>
-              <AboutNavLinks to='/'>Home</AboutNavLinks>
+              {/* <AboutNavLinks to='/'>Home</AboutNavLinks> */}
+              <AboutNavLinks href='/'>Home</AboutNavLinks>
             </AboutNavItem>
             <AboutNavItem>
-              <AboutNavLinks to='/signUp'>Sign Up</AboutNavLinks>
+              {/* <AboutNavLinks to='/templates'>Templates</AboutNavLinks> */}
+              <AboutNavLinks href='/templates'>CV_Templates</AboutNavLinks>
             </AboutNavItem>
             <AboutNavItem>
-              <AboutNavLinks to='/login'>Sign In</AboutNavLinks>
+              {/* <AboutNavLinks to='/signUp'>Sign Up</AboutNavLinks> */}
+              <AboutNavLinks href='/signUp'>Sign Up</AboutNavLinks>
+            </AboutNavItem>
+            <AboutNavItem>
+              {/* <AboutNavLinks to='/login'>Sign In</AboutNavLinks> */}
+              <AboutNavLinks href='/login'>Sign In</AboutNavLinks>
             </AboutNavItem>
             <AboutNavBtn>
-              <AboutBtnLink to='/contactUs'>Contact Us</AboutBtnLink>
+              {/* <AboutBtnLink to='/contactUs'>Contact Us</AboutBtnLink> */}
+              <AboutBtnLink href='mailto:sdsd@sdsdsdsd.com'>
+                Contact Us
+              </AboutBtnLink>
             </AboutNavBtn>
           </AboutNavMenu>
         </AboutNavContainer>

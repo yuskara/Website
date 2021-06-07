@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const pool = require('../connection/connection');
+const pool = require('../private/connection/connection');
 
 /* GET method */
 router.get('/', (req, res) => {

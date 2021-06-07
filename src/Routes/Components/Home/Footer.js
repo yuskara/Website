@@ -17,14 +17,6 @@ function Footer() {
             <h4 className='footer-box2-text'>
               We help future bosses of business. Together, we make better.
             </h4>
-            <div class='contact'>
-              <a href='mailto:someone@example.com'>
-                <span>
-                  <i class='fas fa-at'></i> Contact us
-                </span>
-              </a>
-              <br></br>
-            </div>
           </div>
           <div id='footer-box1' class='footer-boxes'>
             <div className='templateHome-footer-menu'>

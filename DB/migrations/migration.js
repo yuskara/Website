@@ -2,22 +2,10 @@ require('dotenv').config();
 
 exports.up = function(knex, Promise){
   return knex.schema
-  .createTable('userTypes', table =>{
-    table.increments('id');
-    table.date('creationDate', 45).notNullable();
-    table.varchar('fullName', 100).notNullable();
-    table.varchar('userType', 100).notNullable();
-    table.varchar('description', 100).notNullable();
-  })
-  .createTable('cvTemplates', table => {
-    table.increments('id');
-    table.date('creationDate', 45).notNullable();
-    table.varchar('cvType', 100).notNullable();
-  })
   .createTable('languages', table => {
     table.increments('id');
     table.date('creationDate', 45).notNullable();
-    table.varchar('langauge', 100).notNullable();
+    table.varchar('language', 100).notNullable();
   })
   .createTable('professions', table => {
     table.increments('id');
@@ -30,12 +18,26 @@ exports.up = function(knex, Promise){
     table.varchar('fullName', 100).notNullable();
     table.varchar('gender', 45).notNullable();
   })
+  .createTable('userTypes', table =>{
+    table.increments('id');
+    table.date('creationDate', 45).notNullable();
+    table.varchar('fullName', 100).notNullable();
+    table.varchar('userType', 100).notNullable();
+    table.varchar('description', 100).notNullable();
+  })
+  .createTable('cvTemplates', table => {
+    table.increments('id');
+    table.date('creationDate', 45).notNullable();
+    table.varchar('cvType', 100).notNullable();
+  })
+
   .createTable('subscriptions', table => {
     table.increments('id');
     table.date('subscriptionDate', 45).notNullable();
     // table.varchar('fullName').notNullable();
     table.varchar('subscribe', 100).notNullable();
-    table.integer('cvTemplateId').references('id').inTable('cvTemplates'); 
+    table.integer('cvTemplateId').unsigned().nullable();
+    table.foreign('cvTemplateId').references('cvTemplates.id');
   })
   .createTable('countries', table => {
     table.increments('id');
@@ -49,14 +51,16 @@ exports.up = function(knex, Promise){
     table.increments('id');
     table.date('creationDate', 45).notNullable();
     table.varchar('state', 100).notNullable();
-    // table.integer('cityId').references('id').inTable('cities');
-    table.integer('countryId').references('id').inTable('countries');
+    //table.integer('cityId').references('id').inTable('cities');  // POSTGRE (FK'S)
+    table.integer('countryId').unsigned().nullable();     // MYSQL (FK'S)
+    table.foreign('countryId').references('countries.id');  //MYSQL  (FK'S)
   })
   .createTable('cities', table => {
     table.increments('id');
     table.date('creationDate', 45).notNullable();
     table.varchar('cityName', 100).notNullable();
-    table.integer('stateId').references('id').inTable('states');
+    table.integer('stateId').unsigned().nullable();
+    table.foreign('stateId').references('states.id');
     // table.integer('countryId').references('id').inTable('countries');
   })
   .createTable('users', table =>{
@@ -68,14 +72,21 @@ exports.up = function(knex, Promise){
     table.varchar('password', 100).notNullable();
     table.date('dateOfBirth', 100).notNullable();
     table.varchar('lookingJobAt', 100).notNullable();
-    table.integer('userTypeId').references('id').inTable('userTypes'); // Foreign Key example
+    table.integer('userTypeId').unsigned().nullable();
+    table.foreign('userTypeId').references('userTypes.id');
+    //table.integer('userTypeId').references('id').inTable('userTypes'); // Foreign Key example
     // table.integer('countryId').references('id').inTable('countries'); 
-    table.integer('languageId').references('id').inTable('languages'); 
-    table.integer('professionId').references('id').inTable('professions'); 
-    table.integer('cityId').references('id').inTable('cities'); 
+    table.integer('languageId').unsigned().nullable();
+    table.foreign('languageId').references('languages.id');
+    table.integer('professionId').unsigned().nullable();
+    table.foreign('professionId').references('professions.id');
+    table.integer('cityId').unsigned().nullable();
+    table.foreign('cityId').references('cities.id');
     // table.integer('stateId').references('id').inTable('states'); 
-    table.integer('subscriptionId').references('id').inTable('subscriptions'); 
-    table.integer('genderId').references('id').inTable('genders'); 
+    table.integer('subscriptionId').unsigned().nullable();
+    table.foreign('subscriptionId').references('subscriptions.id');
+    table.integer('genderId').unsigned().nullable();
+    table.foreign('genderId').references('genders.id');
   })
   .createTable('purchases', table =>{
     table.increments('id');
@@ -83,8 +94,10 @@ exports.up = function(knex, Promise){
     table.varchar('fullName', 100).notNullable();
     table.varchar('cvType', 100).notNullable();
     table.float('amount', 45).notNullable(); 
-    table.integer('userId').references('id').inTable('users'); 
-    table.integer('cvTemplateId').references('id').inTable('cvTemplates'); 
+    table.integer('userId').unsigned().nullable();
+    table.foreign('userId').references('users.id');
+    table.integer('cvTemplateId').unsigned().nullable();
+    table.foreign('cvTemplateId').references('cvTemplates.id');
     // table.integer('countryId').references('id').inTable('countries'); 
     // table.integer('cityId').references('id').inTable('cities'); 
     // table.integer('stateId').references('id').inTable('states');
@@ -94,18 +107,17 @@ exports.up = function(knex, Promise){
     table.float('floatNumber').notNullable(); // 12.56 , 8.90
   })
 };
-
 exports.down = function(knex, Promise){
   return knex.schema
-  .dropTable('users')
-  .dropTable('userTypes')
   .dropTable('purchases')
-  .dropTable('cvTemplates')
-  .dropTable('countries')
+  .dropTable('users')
+  .dropTable('genders')
+  .dropTable('userTypes')
   .dropTable('languages')
   .dropTable('professions')
+  .dropTable('subscriptions')
+  .dropTable('cvTemplates')
   .dropTable('cities')
   .dropTable('states')
-  .dropTable('subscriptions')
-  .dropTable('genders')
+  .dropTable('countries')
 };

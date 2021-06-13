@@ -1,4 +1,4 @@
-require('dotenv').config();
+ require('dotenv').config();
 
 exports.up = function(knex, Promise){
   return knex.schema

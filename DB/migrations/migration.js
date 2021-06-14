@@ -1,7 +1,19 @@
- require('dotenv').config();
+require('dotenv').config();
 
 exports.up = function(knex, Promise){
   return knex.schema
+  .createTable('userTypes', table =>{
+    table.increments('id');
+    table.date('creationDate', 45).notNullable();
+    table.varchar('fullName', 100).notNullable();
+    table.varchar('userType', 100).notNullable();
+    table.varchar('description', 100).notNullable();
+  })
+  .createTable('cvTemplates', table => {
+    table.increments('id');
+    table.date('creationDate', 45).notNullable();
+    table.varchar('cvType', 100).notNullable();
+  })
   .createTable('languages', table => {
     table.increments('id');
     table.date('creationDate', 45).notNullable();
@@ -18,19 +30,6 @@ exports.up = function(knex, Promise){
     table.varchar('fullName', 100).notNullable();
     table.varchar('gender', 45).notNullable();
   })
-  .createTable('userTypes', table =>{
-    table.increments('id');
-    table.date('creationDate', 45).notNullable();
-    table.varchar('fullName', 100).notNullable();
-    table.varchar('userType', 100).notNullable();
-    table.varchar('description', 100).notNullable();
-  })
-  .createTable('cvTemplates', table => {
-    table.increments('id');
-    table.date('creationDate', 45).notNullable();
-    table.varchar('cvType', 100).notNullable();
-  })
-
   .createTable('subscriptions', table => {
     table.increments('id');
     table.date('subscriptionDate', 45).notNullable();
@@ -107,6 +106,7 @@ exports.up = function(knex, Promise){
     table.float('floatNumber').notNullable(); // 12.56 , 8.90
   })
 };
+
 exports.down = function(knex, Promise){
   return knex.schema
   .dropTable('purchases')

@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { deviceSize } from './Assets/responsive';
 import EksiNousLogo from '../../imgs/logo_NoFrame.svg';
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
+import cookies from "js-cookie";
+import classNames from "classnames";
 
 const AboutNav = styled.nav`
     display: flex;
@@ -140,44 +144,90 @@ const AboutBtnLink =styled.a`
     }
 `;
 
+
+// implementation languages
+const languages = [
+    {
+      code: "en",
+      country_code: "gb",
+    },
+    {
+      code: "gr",
+      country_code: "gr",
+    },
+  ];
+  
 function AboutMenu({ aboutToggle }) {
+    const currentLanguageCode = cookies.get("i18next") || "en";
+    const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
+    const { t } = useTranslation();
+  
+    useEffect(() => {
+      document.body.dir = currentLanguage.dir || "ltr";
+      document.title = t("app_title");
+    }, [currentLanguage, t]);
+  
     return (
-        <>
-            <AboutNav>
-                <AboutNavContainer>
-                    <AboutNavLogo to=''>
-                        {/* Eksi-Nous */}
-                        <img src={EksiNousLogo} />
-                        </AboutNavLogo>
-                    <AboutMobileIcon onClick={aboutToggle}>
-                        <AboutFaBarsToggle />
-                    </AboutMobileIcon>
-                    <AboutNavMenu>
-                        <AboutNavItem>
-                            {/* <AboutNavLinks to='/'>Home</AboutNavLinks> */}
-                            <AboutNavLinks href='/'>Home</AboutNavLinks>
-                        </AboutNavItem>
-                        <AboutNavItem>
-                            {/* <AboutNavLinks to='/templates'>Templates</AboutNavLinks> */}
-                            <AboutNavLinks href='/templates'>CV_Templates</AboutNavLinks>
-                        </AboutNavItem>
-                        <AboutNavItem>
-                            {/* <AboutNavLinks to='/signUp'>Sign Up</AboutNavLinks> */}
-                            <AboutNavLinks href='/signUp'>Sign Up</AboutNavLinks>
-                        </AboutNavItem>
-                        <AboutNavItem>
-                            {/* <AboutNavLinks to='/login'>Sign In</AboutNavLinks> */}
-                            <AboutNavLinks href='/login'>Sign In</AboutNavLinks>
-                        </AboutNavItem>
-                        <AboutNavBtn>
-                            {/* <AboutBtnLink to='/contactUs'>Contact Us</AboutBtnLink> */}
-                            <AboutBtnLink href="mailto:sdsd@sdsdsdsd.com">Contact Us</AboutBtnLink>
-                        </AboutNavBtn>
-                    </AboutNavMenu>
-                </AboutNavContainer>
-            </AboutNav>
-        </>
-    )
+      <>
+        <AboutNav>
+          <AboutNavContainer>
+            <AboutNavLogo to="/">
+              {/* Eksi-Nous */}
+              <img src={EksiNousLogo} />
+            </AboutNavLogo>
+            <AboutMobileIcon  onClick={aboutToggle}>
+              <AboutFaBarsToggle />
+            </AboutMobileIcon >
+            <AboutNavMenu>
+              <AboutNavItem>
+                <AboutNavLinks to="/">Home</AboutNavLinks>
+              </AboutNavItem>
+              <AboutNavItem>
+                <AboutNavLinks to="/signUp">Sign Up</AboutNavLinks>
+              </AboutNavItem>
+              <AboutNavItem>
+                <AboutNavLinks to="/login">Sign In</AboutNavLinks>
+              </AboutNavItem>
+              <div className="language-select">
+            
+                  <div className="dropdown">
+                    <ul
+                      className="dropdown-menu-about"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      {languages.map(({ code, country_code }) => (
+                        <li key={country_code}>
+                          <a
+                            href="#"
+                            className={classNames("dropdown-item", {
+                              disabled: currentLanguageCode === code,
+                            })}
+                            onClick={() => {
+                              i18next.changeLanguage(code);
+                            }}
+                          >
+                            <span
+                              className={`flag-icon flag-icon-${country_code} mx-4`}
+                              style={{
+                                opacity: currentLanguageCode === code ? 0.7 : 1,
+                              }}
+                            ></span>
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+              </div>
+              <AboutNavBtn>
+                <AboutBtnLink to="/contactUs">Contact Us</AboutBtnLink>
+              </AboutNavBtn>
+
+              
+            </AboutNavMenu>
+          </AboutNavContainer>
+        </AboutNav>
+      </>
+    );
 }
 
 export default AboutMenu;

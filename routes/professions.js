@@ -34,8 +34,9 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   try {
     pool.query(
-      `INSERT INTO professions (creationDate, profession)
-      VALUES ('${req.body.creationDate}','${req.body.profession}')`,
+      `INSERT INTO professions (creationDate, profession) 
+      VALUES ('${req.body.creationDate}',
+            '${req.body.profession}')`,
       () => {
         res.send('Posted successfully.');
       }
@@ -45,15 +46,15 @@ router.post('/', (req, res) => {
   }
 });
 
-
 /* PUT method */
 router.put('/:id', (req, res) => {
-  try {
+  try { 
     pool.query(
       `
     UPDATE professions SET
-    street='${req.body.creationDate}',
-    country_id='${req.body.profession}',
+    creationDate='${req.body.creationDate}', 
+    profession='${req.body.profession}'
+    WHERE id=${req.params.id}
     `,
       () => {
         res.send('Updated entry.');

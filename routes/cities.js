@@ -1,4 +1,4 @@
-const express = require('express');
+ const express = require('express');
 const router = express.Router();
 const pool = require('../connection/connection');
 
@@ -58,7 +58,6 @@ router.put('/:id', (req, res) => {
     `,
       () => {
         res.send('Updated entry.');
-        //pool.end();
       }
     );
   } catch (error) {

@@ -1,6 +1,7 @@
 const faker = require('faker');
 const moment = require('moment');
 
+/*
 function isNotBIO() {
   let country = faker.address.country();
 
@@ -9,7 +10,7 @@ function isNotBIO() {
   }
 
   return country;
-}
+} */
 
 const createFakeCountry = () => ({
   creationDate: moment(faker.date.past()).format('YYYY-MM-DD'),
@@ -18,11 +19,11 @@ const createFakeCountry = () => ({
 
 exports.seed = async function (knex) {
   const fakeCountries = [];
-  const desiredFakeCountires = 100;
+  const desiredFakeCountries = 50;
 
-  for (let i = 0; i < desiredFakeCountires; i += 1) {
+  for (let i = 0; i < desiredFakeCountries; i += 1) {
     fakeCountries.push(createFakeCountry());
   }
 
-  //await knex('countries').insert(fakeCountries);
+  await knex('countries').insert(fakeCountries);
 };

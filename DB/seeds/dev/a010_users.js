@@ -8,10 +8,10 @@ const createFakeUsers = () => ({
   email: faker.internet.email(),
   password: faker.internet.password(),
   dateOfBirth: moment(faker.date.past()).format('YYYY-MM-DD'),
-  amka: faker.random.number({ min: 1, max: 100 }),
-  afm: faker.random.number({ min: 1, max: 100 }),
-  role_id: faker.random.number({ min: 1, max: 2 }),
-  profession_id: faker.random.number({ min: 1, max: 100 }),
+  amka: faker.datatype.number({ min: 1, max: 100 }),
+  afm: faker.datatype.number({ min: 1, max: 100 }),
+  role_id: faker.datatype.number({ min: 1, max: 2 }),
+  profession_id: faker.datatype.number({ min: 1, max: 100 }),
 });
 
 exports.seed = async function (knex) {

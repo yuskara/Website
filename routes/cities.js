@@ -58,7 +58,6 @@ router.put('/:id', (req, res) => {
     `,
       () => {
         res.send('Updated entry.');
-        //pool.end();
       }
     );
   } catch (error) {

@@ -3,13 +3,13 @@ const router = express.Router();
 const pool = require('../connection/connection');
 
 /* GET method */
-router.get('/', (req, res) => {
-  try {
-    pool.query('SELECT * FROM professions', function (error, results, fields) {
-      if (error) {
-        res.send(error);
-      }
-      res.send(results);
+router.get('/genders', (req, res) => {
+  try{
+    pool.query('SELECT * FROM genders', function (error, results, fields) {
+            if (error) {
+                res.send(error);
+            }
+            res.send(results);
     });
   } catch (error) {
     if (error) console.error(`Error: ${error.message}`);
@@ -17,10 +17,10 @@ router.get('/', (req, res) => {
 });
 
 /* Specific GET method */
-router.get('/:id', (req, res) => {
+router.get('/genders/:id', (req, res) => {
   try {
     pool.query(
-      `SELECT * FROM professions WHERE id=${req.params.id}`,
+      `SELECT * FROM genders WHERE id=${req.params.id}`,
       (error, results) => {
         res.send(results);
       }
@@ -31,11 +31,13 @@ router.get('/:id', (req, res) => {
 });
 
 /* POST method */
-router.post('/', (req, res) => {
+router.post('/genders', (req, res) => {
   try {
     pool.query(
-      `INSERT INTO professions (creationDate, profession)
-      VALUES ('${req.body.creationDate}','${req.body.profession}')`,
+      `INSERT INTO genders (creationDate, fullName) 
+      VALUES ('${req.body.creationDate}',
+    '${req.body.fullName}'),
+    '${req.body.gender}')`,
       () => {
         res.send('Posted successfully.');
       }
@@ -46,13 +48,14 @@ router.post('/', (req, res) => {
 });
 
 /* PUT method */
-router.put('/:id', (req, res) => {
+router.put('/genders/:id', (req, res) => {
   try {
     pool.query(
       `
-    UPDATE professions SET
+    UPDATE users SET
     street='${req.body.creationDate}',
-    country_id='${req.body.profession}',
+    street_no='${req.body.fullName}'
+    street_no='${req.body.gender}'
     `,
       () => {
         res.send('Updated entry.');
@@ -65,9 +68,9 @@ router.put('/:id', (req, res) => {
 });
 
 /* DELETE method */
-router.delete('/:id', (req, res) => {
+router.delete('/genders/:id', (req, res) => {
   try {
-    pool.query(`DELETE FROM professions WHERE id=${req.params.id}`, () => {
+    pool.query(`DELETE FROM genders WHERE id=${req.params.id}`, () => {
       res.send('Deleted entry.');
     });
   } catch (error) {

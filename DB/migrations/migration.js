@@ -74,7 +74,7 @@ exports.up = function(knex, Promise){
     table.integer('userTypeId').unsigned().nullable();
     table.foreign('userTypeId').references('userTypes.id');
     //table.integer('userTypeId').references('id').inTable('userTypes'); // Foreign Key example
-    // table.integer('countryId').references('id').inTable('countries'); 
+    //table.integer('countryId').references('id').inTable('countries'); 
     table.integer('languageId').unsigned().nullable();
     table.foreign('languageId').references('languages.id');
     table.integer('professionId').unsigned().nullable();

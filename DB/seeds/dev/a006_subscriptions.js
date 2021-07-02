@@ -14,14 +14,14 @@ const moment = require('moment');
 const createFakeSubscriptions = () => ({
   subscriptionDate: moment(faker.date.past()).format('YYYY-MM-DD'),
   subscribe: faker.lorem.word(),
-  cvTemplateId: faker.datatype.float({ min: 1, max: 100 }),
+  cvTemplateId: faker.datatype.float({ min: 1, max: 1 }),
 });
 
 exports.seed = async function (knex) {
   const fakeSubscriptions = [];
   const desiredFakeSubscriptions = 100;
 
-  for (let i = 0; i < desiredFakeSubscriptions; i += 1) {
+  for (let i = 0; i < desiredFakeSubscriptions; i++) {
     fakeSubscriptions.push(createFakeSubscriptions());
   }
 

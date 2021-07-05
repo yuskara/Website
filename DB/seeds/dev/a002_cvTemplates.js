@@ -24,5 +24,5 @@ exports.seed = async function (knex) {
     fakeCVTemplates.push(createFakeCVTempaltes());
   }
 
-  await knex('cvtemplates').insert(fakeCVTemplates);
+  await knex('cvTemplates').insert(fakeCVTemplates);
 };

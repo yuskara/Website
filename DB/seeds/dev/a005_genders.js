@@ -13,13 +13,12 @@ const moment = require('moment');
 
 const createFakeGenders = () => ({
   creationDate: moment(faker.date.past()).format('YYYY-MM-DD'),
-  fullName: faker.name.firstName(),
   gender: faker.name.gender(),
 });
 
 exports.seed = async function (knex) {
   const fakeGenders = [];
-  const desiredFakeGenders = 10;
+  const desiredFakeGenders = 3;
 
   for (let i = 0; i < desiredFakeGenders; i++) {
     fakeGenders.push(createFakeGenders());

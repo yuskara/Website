@@ -24,5 +24,5 @@ exports.seed = async function (knex) {
     fakeLanguages.push(createFakeLanguages());
   }
 
-  // await knex('languages').insert(fakeLanguages);
+  await knex('languages').insert(fakeLanguages);
 };

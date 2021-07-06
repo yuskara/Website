@@ -1,28 +1,28 @@
 const faker = require('faker');
 const moment = require('moment');
 
-function isNotBIO() {
-  let country = faker.address.country();
+// function isNotBIO() {
+//   let country = faker.address.country();
 
-  while (country === 'British Indian Ocean Territory (Chagos Archipelago)') {
-    country = faker.address.country();
-  }
+//   while (country === 'British Indian Ocean Territory (Chagos Archipelago)') {
+//     country = faker.address.country();
+//   }
 
-  return country;
-}
+//   return country;
+// }
 
-const createFakeCountry = () => ({
+const createFakeLanguages = () => ({
   creationDate: moment(faker.date.past()).format('YYYY-MM-DD'),
-  countryName: faker.address.country(),
+  language: faker.address.timeZone(),
 });
 
 exports.seed = async function (knex) {
-  const fakeCountries = [];
-  const desiredFakeCountires = 100;
+  const fakeLanguages = [];
+  const desiredFakeLanguages = 10;
 
-  for (let i = 0; i < desiredFakeCountires; i += 1) {
-    fakeCountries.push(createFakeCountry());
+  for (let i = 0; i < desiredFakeLanguages; i++) {
+    fakeLanguages.push(createFakeLanguages());
   }
 
-  //await knex('countries').insert(fakeCountries);
+  await knex('languages').insert(fakeLanguages);
 };

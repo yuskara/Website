@@ -1,28 +1,29 @@
 const faker = require('faker');
 const moment = require('moment');
 
-function isNotBIO() {
-  let country = faker.address.country();
+// function isNotBIO() {
+//   let country = faker.address.country();
 
-  while (country === 'British Indian Ocean Territory (Chagos Archipelago)') {
-    country = faker.address.country();
-  }
+//   while (country === 'British Indian Ocean Territory (Chagos Archipelago)') {
+//     country = faker.address.country();
+//   }
 
-  return country;
-}
+//   return country;
+// }
 
-const createFakeCountry = () => ({
+const createFakeStates = () => ({
   creationDate: moment(faker.date.past()).format('YYYY-MM-DD'),
-  countryName: faker.address.country(),
+  state: faker.address.state(),
+  countryId: faker.datatype.float({ min: 1, max: 1 }),
 });
 
 exports.seed = async function (knex) {
-  const fakeCountries = [];
-  const desiredFakeCountires = 100;
+  const fakeStates = [];
+  const desiredFakeStates = 100;
 
-  for (let i = 0; i < desiredFakeCountires; i += 1) {
-    fakeCountries.push(createFakeCountry());
+  for (let i = 0; i < desiredFakeStates; i++) {
+    fakeStates.push(createFakeStates());
   }
 
-  //await knex('countries').insert(fakeCountries);
+  await knex('states').insert(fakeStates);
 };

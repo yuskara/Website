@@ -3,24 +3,29 @@ const moment = require('moment');
 
 const createFakeUsers = () => ({
   creationDate: moment(faker.date.past()).format('YYYY-MM-DD'),
-  first_name: faker.name.firstName(),
-  last_name: faker.name.lastName(),
+  firstName: faker.name.firstName(),
+  lastName: faker.name.lastName(),
   email: faker.internet.email(),
   password: faker.internet.password(),
   dateOfBirth: moment(faker.date.past()).format('YYYY-MM-DD'),
-  amka: faker.datatype.number({ min: 1, max: 100 }),
-  afm: faker.datatype.number({ min: 1, max: 100 }),
-  role_id: faker.datatype.number({ min: 1, max: 2 }),
-  profession_id: faker.datatype.number({ min: 1, max: 100 }),
+  lookingJobAt: faker.name.jobTitle(),
+  // afm: faker.datatype.number({ min: 1, max: 100 }),
+  userTypeId: faker.datatype.number({ min: 1, max: 1 }),
+  languageId: faker.datatype.number({ min: 1, max: 1 }),
+  professionId: faker.datatype.float({ min: 1, max: 1 }),
+  cityId: faker.datatype.float({ min: 1, max: 1 }),
+  subscriptionId: faker.datatype.float({ min: 1, max: 1 }),
+  genderId: faker.datatype.float({ min: 1, max: 1 }),
+   
 });
 
 exports.seed = async function (knex) {
   const fakeUsers = [];
   const desiredFakeUsers = 100;
 
-  for (let i = 0; i < desiredFakeUsers; i += 1) {
+  for (let i = 0; i < desiredFakeUsers; i++) {
     fakeUsers.push(createFakeUsers());
   }
 
-   //await knex('a003_users').insert(fakeUsers);
+   await knex('users').insert(fakeUsers);
 };

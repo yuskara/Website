@@ -8,9 +8,9 @@ function Central() {
   return (
     <div className='central_home-container'>
       {/* <!-- Main page --> */}
-      <div class='central-div-welcome-content'>
+      <div className='central-div-welcome-content'>
         <h1 id='services'>Welcome to the StartUP Team</h1>
-        <hr class='central-hr-welcome'></hr>
+        <hr className='central-hr-welcome'></hr>
         <p>For all your professional web designing and development</p>
       </div>
 
@@ -18,12 +18,12 @@ function Central() {
       <FirstSectionCards />
 
       {/* border */}
-      <hr id='portfolio' class='central-hr-horizonal'></hr>
+      <hr id='portfolio' className='central-hr-horizonal'></hr>
 
       {/* <!-- portfolio --> */}
-      <div class='central-div-port'>
-        <h1 class='central-div-port-head'>portfolio</h1>
-        <p class='central-div-port-text'>
+      <div className='central-div-port'>
+        <h1 className='central-div-port-head'>portfolio</h1>
+        <p className='central-div-port-text'>
           <strong>
             Our Team of experts can help you bring your ideas in to light!
           </strong>
@@ -31,14 +31,14 @@ function Central() {
       </div>
       <Portfolio />
 
-      <hr class='central-hr-horizonal'></hr>
+      <hr className='central-hr-horizonal'></hr>
       {/* web-tools */}
       <div className='central-div-web-tools'>
-        <h3 class='central-div-web-tools-head'>
+        <h3 className='central-div-web-tools-head'>
           We built all what you need, for quality web Design and development
           Services?
         </h3>
-        <p class='central-div-web-tools-text'>
+        <p className='central-div-web-tools-text'>
           <strong>
             Here are some of the best web languages, framework/library and
             designing we used

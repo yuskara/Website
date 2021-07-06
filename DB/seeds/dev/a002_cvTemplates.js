@@ -1,7 +1,7 @@
 const faker = require('faker');
 const moment = require('moment');
 
-function isNotBIO() {
+/*function isNotBIO() {
   let country = faker.address.country();
 
   while (country === 'British Indian Ocean Territory (Chagos Archipelago)') {
@@ -9,20 +9,20 @@ function isNotBIO() {
   }
 
   return country;
-}
+} */
 
-const createFakeCountry = () => ({
+const createFakeCVTempaltes = () => ({
   creationDate: moment(faker.date.past()).format('YYYY-MM-DD'),
-  countryName: faker.address.country(),
+  cvType: faker.lorem.word(),
 });
 
 exports.seed = async function (knex) {
-  const fakeCountries = [];
-  const desiredFakeCountires = 100;
+  const fakeCVTemplates = [];
+  const desiredFakeCVTempaltes = 100;
 
-  for (let i = 0; i < desiredFakeCountires; i += 1) {
-    fakeCountries.push(createFakeCountry());
+  for (let i = 0; i < desiredFakeCVTempaltes; i += 1) {
+    fakeCVTemplates.push(createFakeCVTempaltes());
   }
 
-  //await knex('countries').insert(fakeCountries);
+  await knex('cvTemplates').insert(fakeCVTemplates);
 };
